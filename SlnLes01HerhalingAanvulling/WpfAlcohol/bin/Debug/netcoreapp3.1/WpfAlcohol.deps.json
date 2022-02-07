@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "WpfAlcohol/1.0.0": {
+        "runtime": {
+          "WpfAlcohol.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WpfAlcohol/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
