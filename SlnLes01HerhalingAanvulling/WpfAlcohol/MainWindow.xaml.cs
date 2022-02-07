@@ -24,10 +24,13 @@ namespace WpfAlcohol
         {
             InitializeComponent();
         }
+        int BierGlazen = 0;
+        int WijnGlazen = 0;
+        string SterkeGlazen = "";
 
         private void sliderGlazenSterke_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            SterkeGlazen = Convert.ToInt32(Math.Round(sliderGlazenSterke.Value));
         }
 
         private void sliderGlazenWijn_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -41,7 +44,7 @@ namespace WpfAlcohol
         }
         private void CheckGehalte()
         {
-
+            
         }
     }
 }

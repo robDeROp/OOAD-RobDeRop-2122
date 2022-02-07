@@ -36,13 +36,13 @@
                         <RowDefinition Height="60"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Slider x:Name="sliderGlazenBier" Width="auto" Height="20"  
-                    Maximum="100" Minimum="0" Grid.Row="0">
+                    Maximum="6" Minimum="0" Grid.Row="0" ValueChanged="sliderGlazenBier_ValueChanged" SmallChange="1">
                     </Slider>
                     <Slider x:Name="sliderGlazenWijn" Width="auto" Height="20"  
-                    Maximum="100" Minimum="0" Grid.Row="1">
+                    Maximum="6" Minimum="0" Grid.Row="1" ValueChanged="sliderGlazenWijn_ValueChanged" SmallChange="1">
                     </Slider>
                     <Slider x:Name="sliderGlazenSterke" Width="auto" Height="20"  
-                    Maximum="100" Minimum="0" Grid.Row="2">
+                    Maximum="6" Minimum="0" Grid.Row="2" ValueChanged="sliderGlazenSterke_ValueChanged" SmallChange="1">
                     </Slider>
                 </Grid>
                 <Grid VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="2" Height="auto">
