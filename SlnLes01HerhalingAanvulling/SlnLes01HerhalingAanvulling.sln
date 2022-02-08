@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{97B795A2-578C-4355-8665-102A133CCB78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOxo", "WpfOxo\WpfOxo.csproj", "{33656898-8EFC-46E2-B138-57EF6E293887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfOxo", "WpfOxo\WpfOxo.csproj", "{33656898-8EFC-46E2-B138-57EF6E293887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAgenda", "WpfAgenda\WpfAgenda.csproj", "{C6FEC5F1-61B7-4F7A-8CC8-153797D793B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{33656898-8EFC-46E2-B138-57EF6E293887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33656898-8EFC-46E2-B138-57EF6E293887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33656898-8EFC-46E2-B138-57EF6E293887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6FEC5F1-61B7-4F7A-8CC8-153797D793B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6FEC5F1-61B7-4F7A-8CC8-153797D793B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6FEC5F1-61B7-4F7A-8CC8-153797D793B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6FEC5F1-61B7-4F7A-8CC8-153797D793B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
