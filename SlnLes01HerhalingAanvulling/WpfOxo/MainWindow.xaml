@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfOxo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfOxo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Width="350" Height="350">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="X0Y0" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="0" Grid.Column="0" Click="X0Y0_Click" />
+            <Button x:Name="X1Y0" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="0" Grid.Column="1" Click="X1Y0_Click"/>
+            <Button x:Name="X2Y0" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="0" Grid.Column="2" Click="X2Y0_Click"/>            
+            <Button x:Name="X0Y1" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="1" Grid.Column="0" Click="X0Y1_Click"/>
+            <Button x:Name="X1Y1" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="1" Grid.Column="1" Click="X1Y1_Click"/>
+            <Button x:Name="X2Y1" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="1" Grid.Column="2" Click="X2Y1_Click"/>            
+            <Button x:Name="X0Y2" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="2" Grid.Column="0" Click="X0Y2_Click"/>
+            <Button x:Name="X1Y2" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="2" Grid.Column="1" Click="X1Y2_Click"/>
+            <Button x:Name="X2Y2" Content="" HorizontalAlignment="Center" Width="116" Height="116" Grid.Row="2" Grid.Column="2" Click="X2Y2_Click"/>
+
+        </Grid>
+        <Grid Width="350" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Label x:Name="lblWinnaaar" Content="" HorizontalAlignment="Left"/>
+        </Grid>
+    </Grid>
+</Window>
