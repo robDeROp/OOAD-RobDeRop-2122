@@ -64,31 +64,43 @@ namespace WpfPaswoordChecker
             byte R = Convert.ToByte(0);
             byte G = Convert.ToByte(255);
             byte B = Convert.ToByte(0);
+            byte R2 = Convert.ToByte(255);
+            byte G2 = Convert.ToByte(0);
+            byte B2 = Convert.ToByte(0);
             if (!errors[2])
             {
                 lblAchtKarakters.Foreground = new SolidColorBrush(Color.FromRgb(R, G, B));
                 err--;
             }
+            else lblAchtKarakters.Foreground = new SolidColorBrush(Color.FromRgb(R2, G2, B2)); ;
             if (!errors[0])
             {
                 lblKleineletter.Foreground = new SolidColorBrush(Color.FromRgb(R, G, B));
                 err--;
             }
+            else lblKleineletter.Foreground = new SolidColorBrush(Color.FromRgb(R2, G2, B2)); ;
+
             if (!errors[1])
             {
                 lblHoofdletter.Foreground = new SolidColorBrush(Color.FromRgb(R, G, B));
                 err--;
             }
+            else lblHoofdletter.Foreground = new SolidColorBrush(Color.FromRgb(R2, G2, B2)); ;
+
             if (!errors[3])
             {
                 lblEenCijfer.Foreground = new SolidColorBrush(Color.FromRgb(R, G, B));
                 err--;
             }
+            else lblEenCijfer.Foreground = new SolidColorBrush(Color.FromRgb(R2, G2, B2)); ;
+
             if (!errors[4])
             {
                 lblVreemdKarakter.Foreground = new SolidColorBrush(Color.FromRgb(R, G, B));
                 err--;
             }
+            else lblVreemdKarakter.Foreground = new SolidColorBrush(Color.FromRgb(R2, G2, B2)); ;
+
             if (err == 0) btnRegistreer.IsEnabled = true;
             else btnRegistreer.IsEnabled = false;
         }
