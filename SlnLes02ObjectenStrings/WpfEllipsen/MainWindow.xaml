@@ -1,0 +1,70 @@
+﻿<Window x:Class="WpfEllipsen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfEllipsen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btnTekenen" Content="TEKENEN" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Width="138" Height="30" FontWeight="Bold" Click="btnTekenen_Click" Grid.Row="0"/>
+                <Label x:Name="lblErr" Content="" Grid.Row="1" Foreground="#FFF31212"/>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblAantal" Content="Aantal ellipsen:" Grid.Column="0"/>
+                    <Slider x:Name="SliderAantal" Maximum="50" Minimum="0" Grid.Column="1" ValueChanged="SliderAantal_ValueChanged" SmallChange="1"/>
+                    <Label x:Name="lblAantalVal" Content="" Grid.Column="2"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblMinRad" Content="Minimum Radius:" Grid.Column="0" Grid.Row="1" />
+                    <Slider x:Name="SliderMinRad" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="1" ValueChanged="SliderMinRad_ValueChanged" SmallChange="1"/>
+                    <Label x:Name="lblMinRadVal" Content="" Grid.Column="2"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblMaxRad" Content="Maximum Radius:" Grid.Column="0" Grid.Row="1" />
+                    <Slider x:Name="SliderMaxRad" Maximum="100" Minimum="0" Grid.Column="1" Grid.Row="2" ValueChanged="SliderMaxRad_ValueChanged" SmallChange="1"/>
+                    <Label x:Name="lblMaxRadVal" Content="" Grid.Column="2"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Canvas x:Name="ElipseCanvas" HorizontalAlignment="Left" Grid.Row="1"/>
+
+    </Grid>
+</Window>
