@@ -21,7 +21,8 @@ namespace WpfTimer
     /// </summary>
     public partial class MainWindow : Window
     {
-        int ticks = 0;
+        int seconden = 0;
+        int minuten = 0;
         DispatcherTimer _timer;
         public MainWindow()
         {
@@ -33,10 +34,26 @@ namespace WpfTimer
 
         private void Tick(object sender, EventArgs e)
         {
-            ticks++;
-            lblTijd.Content = ticks.ToString();
+            seconden++;
+            if(seconden == 60)
+            {
+                seconden = 0;
+                minuten++;
+            }
+            ShowTime();
         }
-
+        private void ShowTime()
+        {
+            string s = "";
+            string m = "";
+            if (seconden.ToString().Length == 1) s = "0";
+            if (minuten.ToString().Length == 1) m = "0";
+            s += seconden.ToString();
+            m += minuten.ToString();
+            lblTijd.Content = $"{m}:{s}";
+            rectMin.Height = 10 + minuten;
+            rectSec.Height = 10 + seconden;
+        }
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             _timer.Start();
@@ -50,16 +67,21 @@ namespace WpfTimer
             _timer.Stop();
             btnStop.IsEnabled = false;
             btnReset.IsEnabled = false;
+            btnStart.IsEnabled = true;
+
         }
 
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
             _timer.Stop();
-            ticks = 0;
+            seconden = 0;
+            minuten = 0;
             btnStop.IsEnabled = false;
             btnReset.IsEnabled = false;
-            lblTijd.Content = ticks.ToString();
-
+            btnStart.IsEnabled = true;
+            lblTijd.Content = $"00:00";
+            rectMin.Height = 10 + minuten;
+            rectSec.Height = 10 + seconden;
         }
     }
 }

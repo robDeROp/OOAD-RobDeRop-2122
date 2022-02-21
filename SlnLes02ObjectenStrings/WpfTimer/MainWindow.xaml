@@ -21,7 +21,16 @@
             <Button x:Name="btnStop" IsEnabled="False" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Stop" Height="auto" Width="50" Grid.Row="1" Click="btnStop_Click"/>
             <Button x:Name="btnReset" IsEnabled="False" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Reset" Height="auto" Width="50" Grid.Row="2" Click="btnReset_Click"/>
         </Grid>
-        <Label x:Name="lblTijd" VerticalAlignment="Center" HorizontalAlignment="Right" Content="0" Height="auto" Width="auto" Grid.Column="1" FontSize="36" />
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2.2*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lblTijd" VerticalAlignment="Center" HorizontalAlignment="Right" Content="00:00" Height="auto" Width="auto"  FontSize="20" />
+            <Rectangle x:Name="rectMin" HorizontalAlignment="Left" Height="10" Margin="10 0 0 0" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="30"/>
+            <Rectangle x:Name="rectSec" HorizontalAlignment="Left" Height="10" Margin="50 0 0 0" Grid.Row="1" Stroke="Black" VerticalAlignment="Bottom" Width="30"/>
+
+        </Grid>
 
     </Grid>
 </Window>
