@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace WpfEllipsen
 {
@@ -20,12 +21,38 @@ namespace WpfEllipsen
     /// </summary>
     public partial class MainWindow : Window
     {
+        int seconden = 0;
+        DispatcherTimer _timer;
         public MainWindow()
         {
             InitializeComponent();
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromMilliseconds(1000);
+            _timer.Tick += new EventHandler(Tick);
         }
-
-        private void btnTekenen_Click(object sender, RoutedEventArgs e)
+        private void Tick(object sender, EventArgs e)
+        {
+            seconden++;
+            Random rnd = new Random();
+            if (seconden <= aantal)
+            {
+                Ellipse newEllipse = new Ellipse();
+                newEllipse.Width = rnd.Next(minRad, maxRad);
+                newEllipse.Height = rnd.Next(minRad, maxRad);
+                newEllipse.Fill = new SolidColorBrush(Color.FromRgb(Convert.ToByte(rnd.Next(0, 255)), Convert.ToByte(rnd.Next(0, 255)), Convert.ToByte(rnd.Next(0, 255))));
+                double xPos = rnd.Next(0, 800 - maxRad);
+                double yPos = rnd.Next(0, 434 - maxRad);
+                newEllipse.SetValue(Canvas.LeftProperty, xPos);
+                newEllipse.SetValue(Canvas.TopProperty, yPos);
+                //voeg ellips toe aan het canvas
+                ElipseCanvas.Children.Add(newEllipse);
+            }
+            else
+            {
+                _timer.Stop();
+                seconden = 0;
+            }
+        }        private void btnTekenen_Click(object sender, RoutedEventArgs e)
         {
             if (MinWidth > MaxWidth) lblErr.Content = "De minimum waarde mag niet groter zijn dan de maximum waarde";
             else
@@ -37,20 +64,7 @@ namespace WpfEllipsen
         }
         private void TekenElipsen()
         {
-            Random rnd = new Random();
-            for (int i = 0; i < aantal; i++)
-            {
-                Ellipse newEllipse = new Ellipse();
-                newEllipse.Width = rnd.Next(minRad,maxRad);
-                newEllipse.Height = rnd.Next(minRad, maxRad);
-                newEllipse.Fill = new SolidColorBrush(Color.FromRgb(Convert.ToByte(rnd.Next(0,255)), Convert.ToByte(rnd.Next(0, 255)), Convert.ToByte(rnd.Next(0, 255))));
-                double xPos = rnd.Next(0, 800);
-                double yPos = rnd.Next(0, 434);
-                newEllipse.SetValue(Canvas.LeftProperty, xPos);
-                newEllipse.SetValue(Canvas.TopProperty, yPos);
-                //voeg ellips toe aan het canvas
-                ElipseCanvas.Children.Add(newEllipse);
-            }
+            _timer.Start();
         }
 
         int aantal = 0;

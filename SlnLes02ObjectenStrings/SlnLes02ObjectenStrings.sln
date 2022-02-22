@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfPaswoordChecker", "WpfPa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfEllipsen", "WpfEllipsen\WpfEllipsen.csproj", "{4FEE43FD-232C-42C7-96BA-DDFBFDD05344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTimer", "WpfTimer\WpfTimer.csproj", "{A20CE8DE-D514-4F18-8685-586028C49CCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfTimer", "WpfTimer\WpfTimer.csproj", "{A20CE8DE-D514-4F18-8685-586028C49CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPunten", "WpfTimerw\WpfPunten.csproj", "{0AFD423D-51D3-4C81-ADE2-A7DCF834871C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A20CE8DE-D514-4F18-8685-586028C49CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A20CE8DE-D514-4F18-8685-586028C49CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A20CE8DE-D514-4F18-8685-586028C49CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AFD423D-51D3-4C81-ADE2-A7DCF834871C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AFD423D-51D3-4C81-ADE2-A7DCF834871C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AFD423D-51D3-4C81-ADE2-A7DCF834871C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AFD423D-51D3-4C81-ADE2-A7DCF834871C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
