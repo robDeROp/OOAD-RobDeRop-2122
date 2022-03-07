@@ -11,7 +11,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnKiesFile" Height="80" Width="300" Content="Kies Bestand..." FontSize="30"/>
+        <Button x:Name="btnKiesFile" Height="80" Width="300" Content="Kies Bestand..." FontSize="30" Click="btnKiesFile_Click"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -26,14 +26,13 @@
             <Label x:Name="lblGemaakt_" FontSize="20" Content="Gemaakt op: " Grid.Row="2" HorizontalAlignment="Left" Width="200"/>
             <Label x:Name="lblMapNaam_" FontSize="20" Content="Mapnaam: " Grid.Row="3" HorizontalAlignment="Left" Width="200"/>
             <Label x:Name="lblAantalWoorden_" FontSize="20" Content="Aantal woorden: " Grid.Row="4" HorizontalAlignment="Left" Width="200"/>
-            <Label x:Name="lblMeestVoorkomend_" FontSize="20" Content="" Grid.Row="5" HorizontalAlignment="Left" Width="200"/>            <Label x:Name="lblBestandNaam" FontSize="20" Content="Bestandsnaam: " Grid.Row="0" HorizontalAlignment="Left" Width="200"/>
-            <Label x:Name="lblBestandNaam" FontSize="20" Content=""  Grid.Row="0" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblMeestVoorkomend_" FontSize="20" Content="MeestVoorkomend: " Grid.Row="5" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblBestandsNaam" FontSize="20" Content=""  Grid.Row="0" HorizontalAlignment="Right" Width="200"/>
             <Label x:Name="lblExtentie" FontSize="20" Content=""  Grid.Row="1" HorizontalAlignment="Right" Width="200"/>
-            <Label x:Name="lblGemaakt" FontSize="20" Content=""  Grid.Row="1" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblGemaakt" FontSize="20" Content=""  Grid.Row="2" HorizontalAlignment="Right" Width="200"/>
             <Label x:Name="lblMapNaam" FontSize="20" Content=""  Grid.Row="3" HorizontalAlignment="Right" Width="200"/>
             <Label x:Name="lblAantalWoorden" FontSize="20" Content=""  Grid.Row="4" HorizontalAlignment="Right" Width="200"/>
             <Label x:Name="lblMeestVoorkomend" FontSize="20" Content="" Grid.Row="5" HorizontalAlignment="Right" Width="200"/>
-
         </Grid>
     </Grid>
 </Window>

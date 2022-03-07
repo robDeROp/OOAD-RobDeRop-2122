@@ -25,10 +25,20 @@ namespace WpfFileInfo
         {
             InitializeComponent();
         }
-        
         private void btnKiesFile_Click(object sender, RoutedEventArgs e)
         {
-
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.ShowDialog();
+            FileInfo fi = new FileInfo(dialog.FileName);
+            lblBestandsNaam.Content = fi.Name;
+            lblExtentie.Content = fi.Extension;
+            string content = File.ReadAllText(dialog.FileName);
+            char[] splitChar = { ' ', '.', ',', '?', '!' };
+            string[] Words = content.Split(splitChar);
+            Words = Words.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            lblAantalWoorden.Content = Words.Length;
+            lblGemaakt.Content = fi.CreationTime;
+            
         }
     }
 }
