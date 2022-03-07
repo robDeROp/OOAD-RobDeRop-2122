@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfCopyVs2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCopyVs2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblFile" Content="File in:" FontSize="25"  Grid.Row="0" Grid.Column="0" Height="50" Width="100"/>
+        <Button x:Name="btnGO" Content="GO!" FontSize="25"  Grid.Row="1" Grid.Column="2" Height="50" Width="100" Click="btnGO_Click" IsEnabled="False"/>
+        <Button x:Name="btnKIES" Content="kies..." FontSize="20"  Grid.Row="0" Grid.Column="2" Height="50" Width="80" Click="btnKIES_Click"/>
+        <TextBox x:Name="txbPath" Text="Path..." FontSize="20" Grid.Column="1" Grid.Row="0" Margin="0,25,10,45"/>
+        <Label x:Name="lblMessage" Content="" FontSize="25"  Grid.Row="1" Grid.Column="1" Height="50" Margin="150,25,0,25"/>
+
+    </Grid>
+</Window>
