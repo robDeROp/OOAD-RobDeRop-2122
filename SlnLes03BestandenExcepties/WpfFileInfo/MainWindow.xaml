@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfFileInfo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFileInfo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Width="400" Height="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnKiesFile" Height="80" Width="300" Content="Kies Bestand..." FontSize="30"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lblBestandNaam_" FontSize="20" Content="Bestandsnaam: " Grid.Row="0" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblExtentie_" FontSize="20" Content="Extentie: " Grid.Row="1" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblGemaakt_" FontSize="20" Content="Gemaakt op: " Grid.Row="2" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblMapNaam_" FontSize="20" Content="Mapnaam: " Grid.Row="3" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblAantalWoorden_" FontSize="20" Content="Aantal woorden: " Grid.Row="4" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblMeestVoorkomend_" FontSize="20" Content="" Grid.Row="5" HorizontalAlignment="Left" Width="200"/>            <Label x:Name="lblBestandNaam" FontSize="20" Content="Bestandsnaam: " Grid.Row="0" HorizontalAlignment="Left" Width="200"/>
+            <Label x:Name="lblBestandNaam" FontSize="20" Content=""  Grid.Row="0" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblExtentie" FontSize="20" Content=""  Grid.Row="1" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblGemaakt" FontSize="20" Content=""  Grid.Row="1" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblMapNaam" FontSize="20" Content=""  Grid.Row="3" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblAantalWoorden" FontSize="20" Content=""  Grid.Row="4" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblMeestVoorkomend" FontSize="20" Content="" Grid.Row="5" HorizontalAlignment="Right" Width="200"/>
+
+        </Grid>
+    </Grid>
+</Window>
