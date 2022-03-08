@@ -25,6 +25,11 @@ namespace WpfFileInfo
         {
             InitializeComponent();
         }
+        class Wcount
+        {
+            public string Word;
+            public int Count;
+        }
         private void btnKiesFile_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -38,7 +43,26 @@ namespace WpfFileInfo
             Words = Words.Where(x => !string.IsNullOrEmpty(x)).ToArray();
             lblAantalWoorden.Content = Words.Length;
             lblGemaakt.Content = fi.CreationTime;
-            
+            string[] PathFolders = fi.FullName.Split("\\");
+            lblMapNaam.Content = PathFolders[PathFolders.Length - 2];
+            List<Wcount> LCount = new List<Wcount>();
+            bool WordRegistrated = false;
+            foreach (var word in Words)
+            {
+                WordRegistrated = false;
+                foreach (var W in LCount)
+                {
+                    if (W.Word.ToLower() == word)
+                    {
+                        W.Count++;
+                        WordRegistrated = true;
+                        break;
+                    }
+                }
+                if(!WordRegistrated) LCount.Add(new Wcount { Word = word.ToLower(), Count = 1 });
+            }
+            LCount.Sort((x, y) => x.Count.CompareTo(y.Count));
+            lblMeestVoorkomend.Content = $"{LCount[LCount.Count-1].Word}({LCount[LCount.Count - 1].Count}), {LCount[LCount.Count-2].Word}({LCount[LCount.Count - 2].Count}), {LCount[LCount.Count-3].Word}({LCount[LCount.Count - 3].Count})";
         }
     }
 }

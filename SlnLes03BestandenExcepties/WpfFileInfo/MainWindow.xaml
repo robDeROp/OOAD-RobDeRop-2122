@@ -32,7 +32,7 @@
             <Label x:Name="lblGemaakt" FontSize="20" Content=""  Grid.Row="2" HorizontalAlignment="Right" Width="200"/>
             <Label x:Name="lblMapNaam" FontSize="20" Content=""  Grid.Row="3" HorizontalAlignment="Right" Width="200"/>
             <Label x:Name="lblAantalWoorden" FontSize="20" Content=""  Grid.Row="4" HorizontalAlignment="Right" Width="200"/>
-            <Label x:Name="lblMeestVoorkomend" FontSize="20" Content="" Grid.Row="5" HorizontalAlignment="Right" Width="200"/>
+            <Label x:Name="lblMeestVoorkomend" FontSize="19" Content="" Grid.Row="5" HorizontalAlignment="Right" Width="200"/>
         </Grid>
     </Grid>
 </Window>

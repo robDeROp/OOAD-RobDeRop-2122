@@ -1,0 +1,16 @@
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ConsoleCsv.exe
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ConsoleCsv.deps.json
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ConsoleCsv.runtimeconfig.json
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ConsoleCsv.runtimeconfig.dev.json
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ConsoleCsv.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ref\ConsoleCsv.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\bin\Debug\net5.0\ConsoleCsv.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.csproj.AssemblyReference.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.AssemblyInfoInputs.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.AssemblyInfo.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.csproj.CoreCompileInputs.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ref\ConsoleCsv.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes03BestandenExcepties\ConsoleCsv\obj\Debug\net5.0\ConsoleCsv.genruntimeconfig.cache
