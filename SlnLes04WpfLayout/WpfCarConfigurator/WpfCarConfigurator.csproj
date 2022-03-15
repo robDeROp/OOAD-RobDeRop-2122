@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="model1_blauw.jpg" />
+    <None Remove="model1_groen.jpg" />
+    <None Remove="model1_rood.jpg" />
+    <None Remove="model2_blauw.jpg" />
+    <None Remove="model2_groen.jpg" />
+    <None Remove="model2_rood.jpg" />
+    <None Remove="model3_blauw.jpg" />
+    <None Remove="model3_groen.jpg" />
+    <None Remove="model3_rood.jpg" />
+    <None Remove="opties_audio.jpg" />
+    <None Remove="opties_matjes.jpg" />
+    <None Remove="opties_velgen.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="model1_blauw.jpg" />
+    <Resource Include="model1_groen.jpg" />
+    <Resource Include="model1_rood.jpg" />
+    <Resource Include="model2_blauw.jpg" />
+    <Resource Include="model2_groen.jpg" />
+    <Resource Include="model2_rood.jpg" />
+    <Resource Include="model3_blauw.jpg" />
+    <Resource Include="model3_groen.jpg" />
+    <Resource Include="model3_rood.jpg" />
+    <Resource Include="opties_audio.jpg" />
+    <Resource Include="opties_matjes.jpg" />
+    <Resource Include="opties_velgen.jpg" />
+  </ItemGroup>
+
+</Project>
