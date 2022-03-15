@@ -82,17 +82,17 @@ namespace WpfCarConfigurator
             {
                 imgBose.Opacity = 1;
             }
-            else imgBose.Opacity = 0.6;
+            else imgBose.Opacity = 0.3;
             if (cbMatjes.IsChecked == true)
             {
                 imgMat.Opacity = 1;
             }
-            else imgMat.Opacity = 0.6;
+            else imgMat.Opacity = 0.3;
             if (cbVelgen.IsChecked == true)
             {
                 imgAluminium.Opacity = 1;
             }
-            else imgAluminium.Opacity = 0.6;
+            else imgAluminium.Opacity = 0.3;
             BerekenPrijs();
         }
         private void LBModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
