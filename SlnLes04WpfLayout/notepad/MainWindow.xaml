@@ -9,28 +9,28 @@
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_File">
-                    <MenuItem Header="_New" />
-                    <MenuItem Header="_Open" />
-                    <MenuItem Header="_Save" />
-                    <MenuItem Header="_Save As..." />
+                <MenuItem Header="_File" Click="MenuItem_Click_2">
+                    <MenuItem  x:Name="new" Header="_New" Click="new_Click" />
+                    <MenuItem  x:Name="open" Header="_Open" Click="open_Click" />
+                    <MenuItem  x:Name="save" Header="_Save" Click="save_Click" IsEnabled="False"/>
+                    <MenuItem  x:Name="saveAs" Header="_Save As..." Click="saveAs_Click" />
                     <Separator />
                     <MenuItem Header="_Exit" />
                 </MenuItem>
-                <MenuItem Header="_Edit">
-                    <MenuItem Header="_Cut" />
-                    <MenuItem Header="_Copy" />
-                    <MenuItem Header="_Paste" />
+                <MenuItem Header="_Edit" Click="MenuItem_Click_1">
+                    <MenuItem x:Name="cut" Header="_Cut" Click="cut_Click" />
+                    <MenuItem x:Name="copy" Header="_Copy" Click="copy_Click" />
+                    <MenuItem  x:Name="paste" Header="_Paste" Click="paste_Click" IsEnabled="False" />
                 </MenuItem>
                 <MenuItem Header="_Help">
-                    <MenuItem Header="_About" Click="MenuItem_Click" />
+                    <MenuItem  Header="_About" Click="MenuItem_Click" />
                 </MenuItem>
             </Menu>
             <StatusBar DockPanel.Dock="Bottom">
                 <Label x:Name="lblCharsText" Content="#Chars:"/>
                 <Label x:Name="lblChars" Content=""/>
             </StatusBar>
-            <TabControl>
+            <TabControl x:Name="Tabs">
                 <TabItem Header="untitled">
                     <TextBox x:Name="txbContent" HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
                 </TabItem>

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eYuYoBYNd0ttQgJD22EeS9vkSuYonLkz/T2hImEqnULBovt3QXljsIJTzgKTqAM9pzfllleY4N7JJsfGjXYiVQ==",
+  "dgSpecHash": "Z6BoPBwsCtkih50eRYO2KkOu2EVcG4KVuSin1GyvSW3h9ELiJuImhPSaEjGKN6JuGSZWzrgZLZ/hfO4MKE7K5Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes03BestandenExcepties\\WpfCopyVs1\\WpfCopyVs1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\robde\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

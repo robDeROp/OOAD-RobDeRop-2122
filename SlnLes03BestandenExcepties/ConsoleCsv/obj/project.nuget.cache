@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TDrj/jKmM3jTIKsLKZAbJsdnr0RToQNtmV/REQ8ZHOGHw9eA3DEedyk0koRoB4WkZ2+Zd9DdDC6Wad3Zq4kMPw==",
+  "dgSpecHash": "oLcGDLw/8qwYgV+edw8gB4QvqS0g3Bpub+doeLIctn+cZ2kJ1ZCBlflI5t7d1L3FLOIOV9GR19kjRH0+31At7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes03BestandenExcepties\\ConsoleCsv\\ConsoleCsv.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\robde\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
