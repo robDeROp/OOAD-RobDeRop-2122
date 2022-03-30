@@ -1,0 +1,15 @@
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\net6.0\ConsoleKaartspel1.exe
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\net6.0\ConsoleKaartspel1.deps.json
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\net6.0\ConsoleKaartspel1.runtimeconfig.json
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\net6.0\ConsoleKaartspel1.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\bin\Debug\net6.0\ConsoleKaartspel1.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.csproj.AssemblyReference.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.AssemblyInfoInputs.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.AssemblyInfo.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.csproj.CoreCompileInputs.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\refint\ConsoleKaartspel1.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ConsoleKaartspel1.genruntimeconfig.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleKaartspel1\obj\Debug\net6.0\ref\ConsoleKaartspel1.dll
