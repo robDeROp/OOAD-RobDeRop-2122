@@ -35,6 +35,9 @@ while (SpelerHans.Count > 0 && SpelerRogier.Count > 0)
     SpelerRogier.RemoveAt(SpelerRogier.Count - 1);
     Console.WriteLine($"stand: Hans {hansPunten} - Rogier {rogierPunten}");
 }
+if (hansPunten > rogierPunten) Console.WriteLine("Hans wint dit spel");
+else if (hansPunten < rogierPunten) Console.WriteLine("Rogier wint dit spel");
+else Console.WriteLine("Gelijk spel");
 
 List<string> Shudden() {
     List<string> shuffleDeck = new List<string>();
