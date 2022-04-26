@@ -23,7 +23,7 @@ double rogierPunten = 0;
 
 while (SpelerHans.Count > 0 && SpelerRogier.Count > 0)
 {
-    Console.WriteLine($"Hans legt: {SpelerHans[SpelerHans.Count-1]}\r\n Rogier legt: {SpelerRogier[SpelerRogier.Count-1]}");
+    Console.WriteLine($"Hans legt: {SpelerHans[SpelerHans.Count-1]}\r\nRogier legt: {SpelerRogier[SpelerRogier.Count-1]}");
     if(SpelerHans.Count > SpelerRogier.Count) hansPunten++;
     else if(SpelerHans.Count < SpelerRogier.Count) rogierPunten++;
     else
