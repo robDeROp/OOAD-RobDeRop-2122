@@ -31,13 +31,13 @@ while (blijvenBieden)
         blijvenBieden = false;
     }
 }
-foreach (Item item in items)
+/*foreach (Item item in items)
 {
     foreach (Bod bod in item.Biedingen)
     {
         Console.WriteLine($"{item.Name} - {bod.kID} - {bod.Price}");
     }
-}
+}*/
 BiedingenGesloten();
 Console.WriteLine();
 void BiedingenGesloten()
