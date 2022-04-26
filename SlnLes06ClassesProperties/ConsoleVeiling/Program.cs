@@ -39,13 +39,16 @@ foreach (Item item in items)
     }
 }
 BiedingenGesloten();
-
+Console.WriteLine();
 void BiedingenGesloten()
 {
     Bod hoogsteBod = new Bod();
     int i = 0;
+    int II = -1;
+    List<int> ToRemove = new List<int>();
     foreach (Item item in items)
     {
+        II = -1;
         i = 0;
         hoogsteBod.kID = -1;
         hoogsteBod.Price = -1;
@@ -66,7 +69,15 @@ void BiedingenGesloten()
         {
             kopers[hoogsteBod.kID].AangekochteItems.Add(new Item { Name = item.Name, Description = item.Description, MinPrice = item.MinPrice, Biedingen = item.Biedingen, aankoopPrijs = hoogsteBod.Price });
             Console.WriteLine($"Voor het item {item.Name} was {kopers[hoogsteBod.kID].FirstName} {kopers[hoogsteBod.kID].LastName} de hoogste bieder met een bod van {hoogsteBod.Price}");
-
+            II = GetItemIndex(item.Name, item.Description);
+            if(II != -1)
+            {
+                ToRemove.Add(II);
+            }
+            else
+            {
+                Console.WriteLine("Probleem bij het verwijderen van de beschikbaarheid van het item: " + item.Name);
+            }
         }
         else
         {
@@ -74,7 +85,27 @@ void BiedingenGesloten()
         }
     
     }
+    foreach(int element in ToRemove)
+    {
+        items.RemoveAt(element);
+    }
+    ToRemove.Clear();
 
+}
+int GetItemIndex(string N, string D)
+{
+    int ItemIndex = -1;
+    int i = 0;
+    foreach(Item item in items)
+    {
+        if(item.Name == N && item.Description == D)
+        {
+            ItemIndex = i;
+            break;
+        }
+        i++;
+    }
+    return ItemIndex;
 }
 void BiedSequentie()
 {
