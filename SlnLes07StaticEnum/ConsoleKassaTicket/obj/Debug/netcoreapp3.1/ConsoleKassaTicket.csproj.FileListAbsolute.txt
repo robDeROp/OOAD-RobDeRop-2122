@@ -1,0 +1,14 @@
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\netcoreapp3.1\ConsoleKassaTicket.exe
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\netcoreapp3.1\ConsoleKassaTicket.deps.json
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\netcoreapp3.1\ConsoleKassaTicket.runtimeconfig.json
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\netcoreapp3.1\ConsoleKassaTicket.runtimeconfig.dev.json
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\netcoreapp3.1\ConsoleKassaTicket.dll
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\bin\Debug\netcoreapp3.1\ConsoleKassaTicket.pdb
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.csproj.AssemblyReference.cache
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.AssemblyInfoInputs.cache
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.AssemblyInfo.cs
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.csproj.CoreCompileInputs.cache
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.dll
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.pdb
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes07StaticEnum\ConsoleKassaTicket\obj\Debug\netcoreapp3.1\ConsoleKassaTicket.genruntimeconfig.cache

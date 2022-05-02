@@ -1,0 +1,14 @@
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\bin\Debug\netcoreapp3.1\ConsoleVeiling_.exe
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\bin\Debug\netcoreapp3.1\ConsoleVeiling_.deps.json
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\bin\Debug\netcoreapp3.1\ConsoleVeiling_.runtimeconfig.json
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\bin\Debug\netcoreapp3.1\ConsoleVeiling_.runtimeconfig.dev.json
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\bin\Debug\netcoreapp3.1\ConsoleVeiling_.dll
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\bin\Debug\netcoreapp3.1\ConsoleVeiling_.pdb
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.csproj.AssemblyReference.cache
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.AssemblyInfoInputs.cache
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.AssemblyInfo.cs
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.csproj.CoreCompileInputs.cache
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.dll
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.pdb
+C:\Users\robde\OneDrive\Documenten\GitHub\T\OOAD-RobDeRop-2122\SlnLes06ClassesProperties\ConsoleVeiling_\obj\Debug\netcoreapp3.1\ConsoleVeiling_.genruntimeconfig.cache

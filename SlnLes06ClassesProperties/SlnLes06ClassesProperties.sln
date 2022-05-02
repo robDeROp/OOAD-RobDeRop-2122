@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31912.275
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleKaartspel1", "ConsoleKaartspel1\ConsoleKaartspel1.csproj", "{9279DB2A-9A41-468F-8A0E-4F37EE6AD18B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleVeiling", "ConsoleVeiling\ConsoleVeiling.csproj", "{6484379C-0EBD-4CCB-8CA4-9978B4B4C43E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleVeiling_", "ConsoleVeiling_\ConsoleVeiling_.csproj", "{D41ED086-446E-4F93-B344-AAA3755EDD66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{9279DB2A-9A41-468F-8A0E-4F37EE6AD18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9279DB2A-9A41-468F-8A0E-4F37EE6AD18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9279DB2A-9A41-468F-8A0E-4F37EE6AD18B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6484379C-0EBD-4CCB-8CA4-9978B4B4C43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6484379C-0EBD-4CCB-8CA4-9978B4B4C43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6484379C-0EBD-4CCB-8CA4-9978B4B4C43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6484379C-0EBD-4CCB-8CA4-9978B4B4C43E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41ED086-446E-4F93-B344-AAA3755EDD66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41ED086-446E-4F93-B344-AAA3755EDD66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41ED086-446E-4F93-B344-AAA3755EDD66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41ED086-446E-4F93-B344-AAA3755EDD66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
