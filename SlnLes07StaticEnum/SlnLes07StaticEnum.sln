@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleKassaTicket", "ConsoleKassaTicket\ConsoleKassaTicket.csproj", "{A280D5AA-0F12-4879-82E9-8515C9716DB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleKassaTicket", "ConsoleKassaTicket\ConsoleKassaTicket.csproj", "{A280D5AA-0F12-4879-82E9-8515C9716DB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEscapeGame", "WpfEscapeGame\WpfEscapeGame.csproj", "{BBE9E088-A710-4FF2-A2B8-1173DAEDAD58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A280D5AA-0F12-4879-82E9-8515C9716DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A280D5AA-0F12-4879-82E9-8515C9716DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A280D5AA-0F12-4879-82E9-8515C9716DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE9E088-A710-4FF2-A2B8-1173DAEDAD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE9E088-A710-4FF2-A2B8-1173DAEDAD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE9E088-A710-4FF2-A2B8-1173DAEDAD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE9E088-A710-4FF2-A2B8-1173DAEDAD58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

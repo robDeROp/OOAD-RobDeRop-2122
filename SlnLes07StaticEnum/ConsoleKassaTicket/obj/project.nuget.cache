@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MNRxBRxEo3R+HoafMlPBzvgw7pMD92XiOwYmUvqinq+CtR2stPVNHwX+UNhE5YIJi62DHuTqOHR+EMOx1YgzIw==",
+  "dgSpecHash": "9eAbYEoWuwvS8l4ktej1dlz0Y9ylamHLLSN2WjfuSus7epVonCstIEfl0TmGDmiiOl3VrH6vLIDVdrIp/2kz9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes07StaticEnum\\ConsoleKassaTicket\\ConsoleKassaTicket.csproj",
+  "projectFilePath": "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes07StaticEnum\\ConsoleKassaTicket\\ConsoleKassaTicket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\robde\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
   ],
