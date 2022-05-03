@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj": {}
+    "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj": {}
   },
   "projects": {
-    "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj": {
+    "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj",
+        "projectUniqueName": "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj",
         "projectName": "ConsoleVeiling_",
-        "projectPath": "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj",
+        "projectPath": "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\ConsoleVeiling_.csproj",
         "packagesPath": "C:\\Users\\robde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\obj\\",
+        "outputPath": "C:\\Users\\robde\\Documents\\GitHub\\OOAD-RobDeRop-2122\\SlnLes06ClassesProperties\\ConsoleVeiling_\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\robde\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

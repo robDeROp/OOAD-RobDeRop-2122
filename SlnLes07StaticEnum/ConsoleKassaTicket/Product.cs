@@ -6,9 +6,9 @@ namespace ConsoleKassaTicket
 {
      public class Product
         {
-        string naam;
-        decimal eenheidsPrijs;
-        string code;
+        public string naam;
+        public decimal eenheidsPrijs;
+        public string code;
         public string setProduct(string n, decimal e, string c)
         {
             naam = n;
@@ -20,7 +20,7 @@ namespace ConsoleKassaTicket
             }
             else
             {
-                return "error: product code doesnt start with 'p' and must have a length of 9 chars! \r\nProduct was created without code";
+                return "\r\n \r\n \r\n error: product code doesnt start with 'p' and must have a length of 6 chars! \r\nProduct was created without code";
             }
         }
         public bool ValideerCode(string c)
@@ -37,7 +37,8 @@ namespace ConsoleKassaTicket
         }
         public override string ToString()
         {
-            return naam + " " + eenheidsPrijs;
+            string returningValue = $"({code}) {naam} {eenheidsPrijs}";
+            return returningValue;
         }
     }
 
