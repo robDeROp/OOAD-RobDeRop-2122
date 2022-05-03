@@ -20,6 +20,7 @@ namespace ConsoleKassaTicket
                 Console.WriteLine("Wat wil je doen?");
                 Console.WriteLine("\n[A] Maak een product aan");
                 Console.WriteLine("\n[B] Toon Producten");
+                Console.WriteLine("\n[C] Koop Producten");
                 Console.WriteLine("\n[esc] Sluit de app");
                 ConsoleKeyInfo KeyKeuze = Console.ReadKey();
                 string Key = KeyKeuze.Key.ToString();
@@ -55,7 +56,8 @@ namespace ConsoleKassaTicket
                         Console.WriteLine("\n[A] JA");
                         Console.WriteLine("\n[B] NEE");
                         ConsoleKeyInfo KeyKeuze2 = Console.ReadKey();
-                        string Key2 = KeyKeuze.Key.ToString();
+                        string Key2 = KeyKeuze2.Key.ToString();
+                        Console.WriteLine(Key2);
                         if(Key2 == "A")
                         {
                             Console.WriteLine("Geef de hoeveelheid in dat u wil bestellen");
@@ -73,8 +75,8 @@ namespace ConsoleKassaTicket
                     string Kassier = Console.ReadLine();
                     Console.WriteLine("Hoe betaal je?");
                     Console.WriteLine("[a] =" + Betaalwijze.Cash);
-                    Console.WriteLine("[a] =" + Betaalwijze.Visa);
-                    Console.WriteLine("[a] =" + Betaalwijze.Bancontanct);
+                    Console.WriteLine("[b] =" + Betaalwijze.Visa);
+                    Console.WriteLine("[c] =" + Betaalwijze.Bancontanct);
 
                     ConsoleKeyInfo KeyKeuze3 = Console.ReadKey();
                     string Key3 = KeyKeuze.Key.ToString();

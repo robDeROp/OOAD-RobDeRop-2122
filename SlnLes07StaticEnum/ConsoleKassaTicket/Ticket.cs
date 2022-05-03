@@ -28,12 +28,12 @@ namespace ConsoleKassaTicket
         }
         public override string ToString()
         {
-            string output = $"KASSATICKET\r\n========\r\nUw kassier: {kassier}";
+            string output = $"\r\n\r\n\r\nKASSATICKET\r\n========\r\nUw kassier: {kassier}";
             foreach (var item in producten)
             {
-                output += $"\r\n({item.ProductCode}) { item.ProductName}: {item.PPP}";
+                output += $"\r\n({item.ProductCode}) { item.ProductName}: {item.PPP}€ x {item.quant} => {item.PPP * item.quant}€";
             }
-            output += $"\r\nBetaald met {betaaldMet}\r\n{totaalPrijs}€";
+            output += $"\r\nBetaald met {betaaldMet}\r\n{totaalPrijs}€\r\n\r\n\r\n";
             return output;
         }
     }
