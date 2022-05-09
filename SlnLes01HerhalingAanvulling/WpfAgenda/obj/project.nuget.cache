@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OknpG/j6Ia0caapB6NylPQdsI7y4FcjuyUhLaRcAKRX/QETGuqLlmkPkbU4247+Km0DJdu141ewZaNj5y1067A==",
+  "dgSpecHash": "dUV5nn4gqm/iWxYnekDLRmkkJVVJb6+vFrNIfAdsaPby3g+M8p08YzvWuOwroGlxgZ2brSAdFKOogInXbK1q2Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes01HerhalingAanvulling\\WpfAgenda\\WpfAgenda.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\robde\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
+  ],
   "logs": []
 }

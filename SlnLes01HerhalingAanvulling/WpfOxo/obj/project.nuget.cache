@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mvqJ6OEVvXcmm2bfvxEKH3Z9XGu0VRxHXPi1NKnFPjeuvAW5zPKCF2fihCjC8G+ed8ZZQQBlnZQGLYUMc9k34Q==",
+  "dgSpecHash": "tlwG21DL75pUs2mpO8bM/8CsAtOW9gyvV+3T0uhZLGwZe0PIP4zaq8ezLqo5ntq49sregIAykAANW7BmU5BuRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\robde\\OneDrive\\Documenten\\GitHub\\T\\OOAD-RobDeRop-2122\\SlnLes01HerhalingAanvulling\\WpfOxo\\WpfOxo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\robde\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
+  ],
   "logs": []
 }
