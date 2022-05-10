@@ -4,19 +4,16 @@ using System.Text;
 
 namespace WpfEscapeGame
 {
-    class Room
+    class Room : Actor
     {
-        public string Name { get; } // read-only: kan maar één keer ingesteld worden
-        public string Description { get; }
-        public string ImgSrc { get; }
+
+        public string ImgSrc { get; set; }
         public List<Item> Items { get; set; } = new List<Item>();
         public List<Door> Doors { get; set; } = new List<Door>();
-        public Room(string name, string desc, string imgsrc)
+        public Room(string name, string desc) : base(name, desc){}
+        public void add_src(string s)
         {
-            Name = name;
-            Description = desc;
-            ImgSrc = imgsrc;
+            ImgSrc = s;
         }
-
     }
 }

@@ -4,22 +4,17 @@ using System.Text;
 
 namespace WpfEscapeGame
 {
-    class Door
+    class Door : Actor
     {
-        public string Name { get; set; }
+        public Actor actor { get; set; }
 
         public bool IsLocked { get; set; } = false;
         public Item Key { get; set; }
         public Room LeadsTo { get; set; }
-        public Door(string name, bool islcoked, Room leadsto)
+        public Door(string name, string desc , bool islcoked, Room leadsto) : base(name, desc)
         {
-            Name = name;
             IsLocked = islcoked;
             LeadsTo = leadsto;
-        }
-        public override string ToString()
-        {
-            return Name;
         }
     }
 }
