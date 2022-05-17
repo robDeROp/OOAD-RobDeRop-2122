@@ -1,0 +1,17 @@
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\bin\Debug\gebruiker WPF.exe.config
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\bin\Debug\gebruiker WPF.exe
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\bin\Debug\gebruiker WPF.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF.csproj.AssemblyReference.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\LoginWindow.g.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\MainWindow.g.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\App.g.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF_MarkupCompile.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF_MarkupCompile.lref
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\LoginWindow.baml
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\MainWindow.baml
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF.g.resources
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker_WPF.Properties.Resources.resources
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF.csproj.GenerateResource.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF.csproj.CoreCompileInputs.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF.exe
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\gebruiker WPF\obj\Debug\gebruiker WPF.pdb
