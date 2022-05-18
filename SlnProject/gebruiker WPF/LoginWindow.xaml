@@ -33,7 +33,7 @@
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Button x:Name="Submit" Content="Submit" Height="40px" Width="150px" Grid.Row="2" Click="Submit_Click" BorderBrush="Black" Background="#FFDE3D3D" FontWeight="Bold" Foreground="Black" BorderThickness="2px">
+        <Button x:Name="Submit" Content="Submit" Height="40px" Width="150px" Grid.Row="2" Click="Submit_Click" BorderBrush="Black" Background="#00DE3D3D" FontWeight="Bold" Foreground="Black" BorderThickness="2px">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>

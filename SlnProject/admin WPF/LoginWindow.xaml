@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:admin_WPF"
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFF5CBCB" Offset="1"/>
+            <GradientStop Color="#FFFBF7DC"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid Height="200px">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -13,9 +19,27 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="UserName" FontSize="15px" Text="gebruikersnaam" Height="30px" Width="150" Grid.Row="0"/>
-        <TextBox x:Name="Password" FontSize="15px" Text="wachtwoord" Height="30px" Width="150" Grid.Row="1"/>
-        <Button x:Name="Submit" Content="Submit" Height="50px" Width="150px" Grid.Row="2" Click="Submit_Click"/>
+        <TextBox x:Name="UserName" Padding="15 5 0 0" FontSize="12px" Text="gebruikersnaam" Height="30px" Width="150" Grid.Row="0"  Background="#B2FFFFFF" BorderBrush="#00ABADB3">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="Password" Padding="15 5 0 0" FontSize="12px" Text="wachtwoord" Height="30px" Width="150" Grid.Row="1"  Background="#B2FFFFFF" BorderBrush="#00ABADB3">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Button x:Name="Submit" Content="Submit" Height="40px" Width="150px" Grid.Row="2" Click="Submit_Click" BorderBrush="Black" Background="#00DE3D3D" FontWeight="Bold" Foreground="Black" BorderThickness="2px">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Label x:Name="Message" Grid.Row="3"/>
     </Grid>
 </Window>

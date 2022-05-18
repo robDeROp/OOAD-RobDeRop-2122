@@ -41,7 +41,7 @@ namespace admin_WPF {
     public partial class LoginWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 16 "..\..\LoginWindow.xaml"
+        #line 22 "..\..\LoginWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox UserName;
         
@@ -49,7 +49,7 @@ namespace admin_WPF {
         #line hidden
         
         
-        #line 17 "..\..\LoginWindow.xaml"
+        #line 29 "..\..\LoginWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox Password;
         
@@ -57,7 +57,7 @@ namespace admin_WPF {
         #line hidden
         
         
-        #line 18 "..\..\LoginWindow.xaml"
+        #line 36 "..\..\LoginWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button Submit;
         
@@ -65,7 +65,7 @@ namespace admin_WPF {
         #line hidden
         
         
-        #line 19 "..\..\LoginWindow.xaml"
+        #line 43 "..\..\LoginWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label Message;
         
@@ -111,7 +111,7 @@ namespace admin_WPF {
             case 3:
             this.Submit = ((System.Windows.Controls.Button)(target));
             
-            #line 18 "..\..\LoginWindow.xaml"
+            #line 36 "..\..\LoginWindow.xaml"
             this.Submit.Click += new System.Windows.RoutedEventHandler(this.Submit_Click);
             
             #line default
