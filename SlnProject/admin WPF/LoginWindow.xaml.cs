@@ -44,7 +44,9 @@ namespace admin_WPF
                 int c = Convert.ToInt32(reader["C"]);
                 if (c > 0)
                 {
-                    Message.Content = $"Welcome {UserName}, we are logging you in, thanks for your patience.";
+                    Message.Content = $"Welcome {UserName.Text}, we are logging you in, thanks for your patience.";
+                    new MainWindow().Show();
+                    this.Close();
                 }
                 else
                 {

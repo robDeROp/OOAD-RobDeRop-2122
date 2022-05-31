@@ -15,3 +15,6 @@ C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debu
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debug\admin WPF.pdb
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debug\LoginWindow.g.cs
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debug\LoginWindow.baml
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debug\admin WPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debug\Edit_Add.g.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\admin WPF\obj\Debug\Edit_Add.baml

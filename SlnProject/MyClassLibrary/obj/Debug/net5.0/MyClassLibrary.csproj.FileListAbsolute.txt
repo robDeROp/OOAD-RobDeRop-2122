@@ -1,6 +1,5 @@
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\bin\Debug\net5.0\MyClassLibrary.deps.json
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\bin\Debug\net5.0\MyClassLibrary.dll
-C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\bin\Debug\net5.0\ref\MyClassLibrary.dll
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\bin\Debug\net5.0\MyClassLibrary.pdb
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\obj\Debug\net5.0\MyClassLibrary.csproj.AssemblyReference.cache
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\obj\Debug\net5.0\MyClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
@@ -10,3 +9,4 @@ C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\obj
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\obj\Debug\net5.0\MyClassLibrary.dll
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\obj\Debug\net5.0\ref\MyClassLibrary.dll
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\obj\Debug\net5.0\MyClassLibrary.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\MyClassLibrary\bin\Debug\net5.0\ref\MyClassLibrary.dll

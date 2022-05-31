@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
+
 
 namespace MyClassLibrary
 {
+
     public class User
     {
+        int ID { get; set; }
         string Fname { get; set; }
         string Lname { get; set; }
         string Login { get; set; }
+        string CreationDate { get; set; }
         string Password { get; set; }
         string Function { get; set; }
         public bool UserCheck(User user)
