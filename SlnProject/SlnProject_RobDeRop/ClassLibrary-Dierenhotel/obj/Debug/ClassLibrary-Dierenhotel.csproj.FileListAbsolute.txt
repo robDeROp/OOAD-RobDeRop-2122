@@ -1,0 +1,7 @@
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\bin\Debug\ClassLibrary-Dierenhotel.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\bin\Debug\ClassLibrary-Dierenhotel.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\obj\Debug\ClassLibrary-Dierenhotel.csproj.AssemblyReference.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\obj\Debug\ClassLibrary-Dierenhotel.csproj.CoreCompileInputs.cache
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\obj\Debug\ClassLibrary-Dierenhotel.dll
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\obj\Debug\ClassLibrary-Dierenhotel.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\ClassLibrary-Dierenhotel\bin\Debug\ClassLibrary-Dierenhotel.dll.config

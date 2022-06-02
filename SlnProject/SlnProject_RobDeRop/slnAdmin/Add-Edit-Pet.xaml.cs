@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace slnAdmin
+{
+    /// <summary>
+    /// Interaction logic for Add_Edit_Pet.xaml
+    /// </summary>
+    public partial class Add_Edit_Pet : Window
+    {
+        public Add_Edit_Pet()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+    }
+}
