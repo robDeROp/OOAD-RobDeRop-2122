@@ -91,10 +91,10 @@
                     </Grid.RowDefinitions>
                     <Label Content="Search:" Height="30" Grid.Row="0"/>
                     <TextBox x:Name="txbSearch_P" Height="20" Width="180" Grid.Row="1" TextChanged="txbSearch_TextChanged"/>
-                    <Button x:Name="btnEdit_P" Content="Aanpassen" Grid.Row="2" Click="btnEdit_Click"/>
-                    <Button x:Name="btnAdd_P" Content="Toevoegen" Grid.Row="3" Click="btnAdd_Click"/>
-                    <Button x:Name="btnDelete_P" Content="Verwijder" Grid.Row="4" Click="btnDelete_Click"/>
-                    <Button x:Name="btnDetails_P" Content="Details" Grid.Row="5" Click="btnDetails_P_Click"/>
+                    <Button x:Name="btnEdit_P" Content="Aanpassen" Grid.Row="2" Click="btnEdit_P_Click" />
+                    <Button x:Name="btnAdd_P" Content="Toevoegen" Grid.Row="3" Click="btnAdd_P_Click" />
+                    <Button x:Name="btnDelete_P" Content="Verwijder" Grid.Row="4" Click="btnDelete_P_Click"  />
+                    <Button x:Name="btnDetails_P" Content="Details" Grid.Row="5" Click="btnDetails_P_Click" />
 
                 </Grid>
             </Grid>
@@ -134,10 +134,10 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="7*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="btnEdit_V" Content="Aanpassen" Grid.Row="0" Click="btnEdit_Click"/>
-                    <Button x:Name="btnAdd_V" Content="Toevoegen" Grid.Row="1" Click="btnAdd_Click"/>
-                    <Button x:Name="btnDelete_V" Content="Verwijder" Grid.Row="2" Click="btnDelete_Click"/>
-                    <Button x:Name="btnDetails_V" Content="Details" Grid.Row="3" Click="btnDetails_V_Click"/>
+                    <Button x:Name="btnEdit_V" Content="Aanpassen" Grid.Row="0" Click="btnEdit_V_Click" />
+                    <Button x:Name="btnAdd_V" Content="Toevoegen" Grid.Row="1" Click="btnAdd_V_Click" />
+                    <Button x:Name="btnDelete_V" Content="Verwijder" Grid.Row="2" Height="36" VerticalAlignment="Top" Click="btnDelete_V_Click" />
+                    <Button x:Name="btnDetails_V" Content="Details" Grid.Row="3" Click="btnDetails_V_Click" />
                 </Grid>
             </Grid>
         </TabItem>

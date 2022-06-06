@@ -88,6 +88,25 @@ namespace slnAdmin
         {
 
         }
+
+        private void btnEdit_V_Click(object sender, RoutedEventArgs e)
+        {
+            Recidency recidency = new Recidency();
+            new Add_Edit_Verblijf(recidency, 0, DG_Overzicht_V).Show();
+        }
+
+        private void btnAdd_V_Click(object sender, RoutedEventArgs e)
+        {
+            Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
+            new Add_Edit_Verblijf(recidency, 1, DG_Overzicht_V).Show();
+        }
+
+        private void btnDelete_V_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+  
         //HUISDIEREN
         private void Huisdieren_Loaded(object sender, RoutedEventArgs e)
         {
@@ -98,11 +117,30 @@ namespace slnAdmin
             }
             this.DG_Overzicht_P.IsReadOnly = true;
         }
+        private void btnEdit_P_Click(object sender, RoutedEventArgs e)
+        {
+            Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
+            new Add_Edit_Pet(pet, 0, DG_Overzicht_P).Show();
+        }
 
+        private void btnAdd_P_Click(object sender, RoutedEventArgs e)
+        {
+            Pet pet = new Pet();
+            new Add_Edit_Pet(pet, 1, DG_Overzicht_P).Show();
+        }
+
+        private void btnDelete_P_Click(object sender, RoutedEventArgs e)
+        {
+            Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
+            Pet.DeletePet(pet);
+        }
         private void btnDetails_P_Click(object sender, RoutedEventArgs e)
         {
             Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
             new Pet_Details(pet).Show();
         }
+
+
+
     }
 }

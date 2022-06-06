@@ -12,6 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassLibrary_Dierenhotel;
+using Microsoft.Win32;
+
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Drawing;
+using System.IO;
+using Image = System.Windows.Controls.Image;
+
 namespace slnAdmin
 {
     /// <summary>
@@ -19,6 +26,7 @@ namespace slnAdmin
     /// </summary>
     public partial class Pet_Details : Window
     {
+        OpenFileDialog openFileDialog = new OpenFileDialog();
         Pet pet = null;
         public Pet_Details(Pet p)
         {
@@ -50,8 +58,18 @@ namespace slnAdmin
         private void SelectName_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             BitmapImage image = img[SelectName.SelectedIndex];
-
             imageDisp.Source = image;
+        }
+
+        private void UploadPicture_Click(object sender, RoutedEventArgs e)
+        {
+            openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
+            openFileDialog.ShowDialog();
+            //Bitmap myBitmap = new Bitmap(openFileDialog.FileName);
+            //MessageBox.Show(myBitmap.ToString());
+            //byte[] imageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
+            //string base64String = Convert.ToBase64String(imageBytes);
+            Pet.UploadImage(openFileDialog.FileName, pet, 1);
         }
     }
 }

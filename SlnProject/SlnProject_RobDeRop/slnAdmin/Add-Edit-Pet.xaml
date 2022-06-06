@@ -21,27 +21,27 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="0" Grid.Row="7" Background="#FFF9C0C0" Click="btnCancel_Click" Grid.ColumnSpan="2" />
-        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="7" Background="#FFD5FFCA" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="0" Grid.Row="8" Background="#FFF9C0C0" Click="btnCancel_Click" Grid.ColumnSpan="2" />
+        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="8" Background="#FFD5FFCA" Click="btnSave_Click"/>
 
         <Label Content="ID:" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Login:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Voornaam:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Achternaam:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Wachtwoord:" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Rol:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Date Time:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
-        <TextBox x:Name="txtDateTime" Grid.Row="6" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
+        <Label Content="Naam:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Opmerking:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Geslacht:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Groote:" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Leeftijd:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Eigenaar:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="Type:" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtLogin" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,18"/>
-        <TextBox x:Name="txtVoornaam" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtAchternaam" Grid.Row="3" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtWachtwoord" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-
-        <ComboBox x:Name="cbRole" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,18">
-        </ComboBox>
+        <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+        <TextBox x:Name="txtOpmerking" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+        <TextBox x:Name="txtGeslacht" Grid.Row="3" Grid.Column="2" Height="20" Margin="0,17,0,18"/>
+        <TextBox x:Name="txtGroote" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+        <TextBox x:Name="txtLeeftijd" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+        <TextBox x:Name="txtEigenaar" Grid.Row="6" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+        <TextBox x:Name="txtType" Grid.Row="7" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
     </Grid>
 </Window>

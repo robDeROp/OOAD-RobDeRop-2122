@@ -8,9 +8,9 @@
         Title="Add_Edit_Verblijf" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="39*"/>
-            <ColumnDefinition Width="161*"/>
-            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="25*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -20,28 +20,23 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="0" Grid.Row="7" Background="#FFF9C0C0" Click="btnCancel_Click" Grid.ColumnSpan="2" />
-        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="7" Background="#FFD5FFCA" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="0" Grid.Row="5" Background="#FFF9C0C0" Click="btnCancel_Click" Grid.ColumnSpan="2" Margin="0,62,0,0" Grid.RowSpan="2" />
+        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="5" Background="#FFD5FFCA" Click="btnSave_Click" Margin="0,62,0,0" Grid.RowSpan="2"/>
 
-        <Label Content="ID:" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Login:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Voornaam:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Achternaam:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Wachtwoord:" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Rol:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Date Time:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="ID:" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" Width="24"/>
+        <Label Content="Start date(yyyy-mm-dd):" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26"/>
+        <Label Content="End date(yyyy-mm-dd):" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26"/>
+        <Label Content="Remarls:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" Width="54"/>
+        <Label Content="Package ID:" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" Width="70"/>
+        <Label Content="Pet ID:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Height="26" Width="44"/>
 
-        <TextBox x:Name="txtDateTime" Grid.Row="6" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
+        <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" IsReadOnly="True" Margin="0,21,0,21"/>
+        <TextBox x:Name="txtStartDate" Grid.Row="1" Grid.Column="2" Margin="0,21,0,21"/>
+        <TextBox x:Name="txtEndDate" Grid.Row="2" Grid.Column="2" Margin="0,21,0,21"/>
+        <TextBox x:Name="txtRemarks" Grid.Row="3" Grid.Column="2" Margin="0,21,0,21"/>
+        <TextBox x:Name="txtPackage_ID" Grid.Row="4" Grid.Column="2" Margin="0,21,0,21"/>
+        <TextBox x:Name="txtPet_ID" Grid.Row="5" Grid.Column="2" IsReadOnly="True" Margin="0,21,0,21"/>
 
-        <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtLogin" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,18"/>
-        <TextBox x:Name="txtVoornaam" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtAchternaam" Grid.Row="3" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtWachtwoord" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-
-        <ComboBox x:Name="cbRole" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,18">
-        </ComboBox>
     </Grid>
 </Window>

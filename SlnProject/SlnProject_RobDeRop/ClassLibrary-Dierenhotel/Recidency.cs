@@ -14,7 +14,9 @@ namespace ClassLibrary_Dierenhotel
         public string StartDate { get; set; }
         public string EndDate { get; set; }
         public string Remarks { get; set; }
+        public string Package_ID { get; set; }
         public string Package { get; set; }
+        public string Pet_ID { get; set; }
         public string Pet { get; set; }
         static public List<Recidency> GetAllRecidencies()
         {
@@ -26,10 +28,50 @@ namespace ClassLibrary_Dierenhotel
                 List<Recidency> recidenies = new List<Recidency>();
                 while (reader.Read())
                 {
-                    recidenies.Add(new Recidency() { ID = Convert.ToInt32(reader["id"]), StartDate = reader["startdate"].ToString(), EndDate = reader["enddate"].ToString(), Remarks = reader["remarks"].ToString(), Package = reader["package_id"].ToString() + " (" + reader["packageName"].ToString() + ")", Pet = reader["pet_id"].ToString() + " (" + reader["petName"].ToString() + ")" });
+                    recidenies.Add(new Recidency() { ID = Convert.ToInt32(reader["id"]), StartDate = reader["startdate"].ToString(), EndDate = reader["enddate"].ToString(), Remarks = reader["remarks"].ToString(), Package_ID = reader["package_id"].ToString(), Package = reader["packageName"].ToString() + ")", Pet_ID = reader["pet_id"].ToString(), Pet = reader["petName"].ToString()});
                 }
                 return recidenies;
             }
         }
-    }
-}
+        static public void UpdateRecidency(Recidency r)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("UPDATE [DierenhotelDB].[dbo].[Recidency] SET startdate = @par2, enddate= @par3, remarks = @par4, package_id = @par5, pet_id = @par6 WHERE id = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", r.ID);
+                comm.Parameters.AddWithValue("@par2", r.StartDate);
+                comm.Parameters.AddWithValue("@par3", r.EndDate);
+                comm.Parameters.AddWithValue("@par4", r.Remarks);
+                comm.Parameters.AddWithValue("@par5", r.Package_ID);
+                comm.Parameters.AddWithValue("@par6", r.Pet_ID);
+                SqlDataReader reader = comm.ExecuteReader();
+            }
+        }
+        //Creating a new user
+        static public void CreateRecidency(Recidency r)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("INSERT INTO [DierenhotelDB].[dbo].[Recidency] (startdate, enddate, remarks, package_id, pet_id) VALUES(@par1,@par2,@par3,@par4,@par5);", conn);
+                comm.Parameters.AddWithValue("@par1", r.StartDate);
+                comm.Parameters.AddWithValue("@par2", r.EndDate);
+                comm.Parameters.AddWithValue("@par3", r.Remarks);
+                comm.Parameters.AddWithValue("@par4", r.Package_ID);
+                comm.Parameters.AddWithValue("@par5", r.Pet_ID);
+                SqlDataReader reader = comm.ExecuteReader();
+            }
+        }
+        //Deleting a user
+        static public void DeleteRecidency(Recidency r)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("DELETE FROM [DierenhotelDB].[dbo].[Recidency] WHERE id = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", r.ID);
+                SqlDataReader reader = comm.ExecuteReader();
+
+            }
+        }
