@@ -49,7 +49,7 @@
             <ComboBox x:Name="cbPet" Grid.Row="2" Height="25" VerticalAlignment="Bottom"/>
             <Label Grid.Row="2" Content="Huisdier Selecteren:" Height="25" VerticalAlignment="Top"/>
 
-            <ComboBox x:Name="cbRes" Grid.Row="3" Height="25" VerticalAlignment="Bottom"/>
+            <ComboBox x:Name="cbRes" Grid.Row="3" Height="25" VerticalAlignment="Bottom" SelectionChanged="PPDUpdate"/>
             <Label Grid.Row="3" Content="Verblijf Selceteren:" Height="25" VerticalAlignment="Top"/>
 
             <Grid Grid.Row="4">
@@ -65,14 +65,14 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Label Content="Selecteer Opties:"/>
-                <CheckBox Grid.Row="1" x:Name="cbKammen" Content="Kammen"/>
-                <CheckBox Grid.Row="2" x:Name="cbWassen" Content="Wassen"/>
-                <CheckBox Grid.Row="3" x:Name="cbGebruikStapmolen" Content="Gebruik stapmolen"/>
-                <CheckBox Grid.Row="4" x:Name="cbHoefsmid" Content="Hoefsmid"/>
-                <CheckBox Grid.Row="5" x:Name="cbGedragstherapie" Content="Gedragstherapie"/>
-                <CheckBox Grid.Row="6" x:Name="cbKnippen" Content="Knippen"/>
-                <CheckBox Grid.Row="7" x:Name="cbLuxeVoedeing" Content="LuxeVoeding"/>
-                <CheckBox Grid.Row="8" x:Name="cbBorstelen" Content="Borstelen"/>
+                <CheckBox Grid.Row="1" x:Name="cbKammen" Content="Kammen" Click="PPDUpdate" />
+                <CheckBox Grid.Row="2" x:Name="cbWassen" Content="Wassen" Click="PPDUpdate"/>
+                <CheckBox Grid.Row="3" x:Name="cbGebruikStapmolen" Content="Gebruik stapmolen" Click="PPDUpdate"/>
+                <CheckBox Grid.Row="4" x:Name="cbHoefsmid" Content="Hoefsmid" Click="PPDUpdate"/>
+                <CheckBox Grid.Row="5" x:Name="cbGedragstherapie" Content="Gedragstherapie" Click="PPDUpdate"/>
+                <CheckBox Grid.Row="6" x:Name="cbKnippen" Content="Knippen" Click="PPDUpdate"/>
+                <CheckBox Grid.Row="7" x:Name="cbLuxeVoedeing" Content="LuxeVoeding" Click="PPDUpdate"/>
+                <CheckBox Grid.Row="8" x:Name="cbBorstelen" Content="Borstelen" Click="PPDUpdate"/>
             </Grid>
         </Grid>
         <Grid Grid.Column="2">
@@ -84,10 +84,8 @@
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
             <Button x:Name="btnAanvragen" Content="Aanvragen" Grid.Row="0" Click="btnAanvragen_Click"/>
-            <Button x:Name="Reset" Content="Reset" Grid.Row="1" Click="Reset_Click" Height="58" Grid.RowSpan="2" VerticalAlignment="Top"/>
-            <Button x:Name="Logout" Content="Log Out" Grid.Row="2" Click="Logout_Click"/>
             <Label Content="Totaal:" Grid.Row="3"/>
-            <Label x:Name="Output" Grid.Row="4"/>
+            <Label x:Name="txtOutput" Grid.Row="4"/>
         </Grid>
     </Grid>
 </Window>

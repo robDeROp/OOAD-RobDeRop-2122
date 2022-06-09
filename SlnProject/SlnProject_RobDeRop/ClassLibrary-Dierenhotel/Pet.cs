@@ -165,5 +165,18 @@ namespace ClassLibrary_Dierenhotel
             }
             return names;
         }
+        static public string GetPetName(int ID)
+        {
+            string name = "";
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT name FROM[DierenhotelDB].[dbo].[Pet] WHERE id = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", ID);
+                SqlDataReader reader = comm.ExecuteReader();
+                name = reader["name"].ToString();
+            }
+            return name;
+        }
     }
 }

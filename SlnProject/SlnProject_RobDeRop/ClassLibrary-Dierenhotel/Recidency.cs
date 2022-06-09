@@ -33,10 +33,26 @@ namespace ClassLibrary_Dierenhotel
                 List<Recidency> recidenies = new List<Recidency>();
                 while (reader.Read())
                 {
-                    recidenies.Add(new Recidency() { ID = Convert.ToInt32(reader["id"]), StartDate = reader["startdate"].ToString(), EndDate = reader["enddate"].ToString(), Remarks = reader["remarks"].ToString(), Package_ID = int.Parse(reader["package_id"].ToString()), Package = reader["packageName"].ToString() + ")", Pet_ID = int.Parse(reader["pet_id"].ToString()), Pet = reader["petName"].ToString(), Status = reader["confirmed"].ToString() });
+                    recidenies.Add(new Recidency() { ID = Convert.ToInt32(reader["id"]), StartDate = reader["startdate"].ToString(), EndDate = reader["enddate"].ToString(), Remarks = reader["remarks"].ToString(), Package_ID = int.Parse(reader["package_id"].ToString()), Package = reader["packageName"].ToString(), Pet_ID = int.Parse(reader["pet_id"].ToString()), Pet = reader["petName"].ToString(), Status = reader["confirmed"].ToString() });
                 }
                 return recidenies;
             }
+        }
+        static public List<int> getOptionsByID (int ID)
+        {
+            List<int> options = new List<int>();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT option_id FROM [DierenhotelDB].[dbo].[ResidencyOption] WHERE residency_id = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", ID);
+                SqlDataReader reader = comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    options.Add(int.Parse(reader["option_id"].ToString()));
+                }
+            }
+            return options;
         }
         static public void UpdateRecidency(Recidency r)
         {
