@@ -20,3 +20,5 @@ C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRo
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnGebruiker\obj\Debug\slnGebruiker.csproj.CopyComplete
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnGebruiker\obj\Debug\slnGebruiker.exe
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnGebruiker\obj\Debug\slnGebruiker.pdb
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnGebruiker\obj\Debug\Residency_Details.g.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnGebruiker\obj\Debug\Residency_Details.baml

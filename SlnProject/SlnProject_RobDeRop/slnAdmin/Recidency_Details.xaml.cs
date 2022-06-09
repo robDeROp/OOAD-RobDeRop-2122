@@ -47,7 +47,7 @@ namespace slnAdmin
             //Eigenaar.Content = pet.Owner;
             //Type.Content = pet.Type;
 
-            img = Recidency.GetResImage(recidency);
+            img = Recidency.GetResImage(recidency.ID);
             int i = 0;
             foreach (BitmapImage data in img)
             {
@@ -70,7 +70,7 @@ namespace slnAdmin
             //byte[] imageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
             //string base64String = Convert.ToBase64String(imageBytes);
             Pet pet = new Pet();
-            Pet.UploadImage(openFileDialog.FileName, pet, 1);
+            Pet.UploadImage(openFileDialog.FileName, recidency.Pet_ID, recidency.ID);
             Load();
         }
     }

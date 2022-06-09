@@ -33,12 +33,6 @@ namespace slnGebruiker
             {
                 cbPet.Items.Add(PetName);
             }
-            List<string> Packages = Recidency.GetPackages();
-            foreach (string PackageName in Packages)
-            {
-                cbRes.Items.Add(PackageName);
-            }
-
         }
 
         private void btnAanvragen_Click(object sender, RoutedEventArgs e)
@@ -139,56 +133,125 @@ namespace slnGebruiker
                 PPD += 2;
             }
             //Package
-            if (cbRes.SelectedIndex == 1)
-            {
-                PPD += 12;
-            }
-            if (cbRes.SelectedIndex == 2)
-            {
-                PPD += 15;
-            }
-            if (cbRes.SelectedIndex == 3)
-            {
-                PPD += 10;
-            }
-            if (cbRes.SelectedIndex == 4)
-            {
-                PPD += 8.5;
-            }
-            if (cbRes.SelectedIndex == 5)
-            {
-                PPD += 12.5;
-            }
-            if (cbRes.SelectedIndex == 6)
-            {
-                PPD += 14.5;
-            }
-            if (cbRes.SelectedIndex == 7)
-            {
-                PPD += 14.5;
-            }
-            if (cbRes.SelectedIndex == 8)
-            {
-                PPD += 16.5;
-            }
-            if (cbRes.SelectedIndex == 9)
-            {
-                PPD += 3;
-            }
-            if (cbRes.SelectedIndex == 10)
-            {
-                PPD += 2;
-            }
-            if (cbRes.SelectedIndex == 11)
-            {
-                PPD += 4;
-            }
-            if (cbRes.SelectedIndex == 12)
-            {
-                PPD += 4;
-            }
+            if (cbRes.Text != "") PPD += Recidency.PackagePrice(cbRes.Text);
             txtOutput.Content = $"Price Per Day: {PPD}€";
         }
 
+        private void Huisdieren_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> Type = Pet.GetTypes();
+            foreach (string type in Type)
+            {
+                cbType.Items.Add(type);
+            }
+            cbGeslacht.Items.Add("M");
+            cbGeslacht.Items.Add("F");
+            cbGeslacht.Items.Add("X");
+            txtID.Text = User_ID.ToString();
+        }
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            Pet p = new Pet();
+            p.Name = txtNaam.Text;
+            p.Age = txtLeeftijd.Text;
+            p.Owner_ID = User_ID.ToString();
+            p.Size = txtGroote.Text;
+            p.Remarks = txtOpmerking.Text;
+            p.Sex = cbGeslacht.SelectedIndex + 1.ToString();
+            p.Type = cbType.Text;
+            Pet.CreatePet(p);
+            txtNaam.Clear();
+            txtLeeftijd.Clear();
+            txtGroote.Clear();
+            txtOpmerking.Clear();
+            cbGeslacht.Text="";
+            cbType.Text="";
+            List<string> PetNames = Pet.GetPetNames(User_ID);
+            cbPet.Items.Clear();
+
+            foreach (string PetName in PetNames)
+            {
+                cbPet.Items.Add(PetName);
+            }
+        }
+
+        private void cbPet_DropDownClosed(object sender, EventArgs e)
+        {
+            List<string> Packages = Recidency.GetPackages(cbPet.Text);
+            if (Packages.Count > 0) cbRes.IsEnabled = true;
+            else cbRes.IsEnabled = false;
+            cbRes.Items.Clear();
+            foreach (string PackageName in Packages)
+            {
+                cbRes.Items.Add(PackageName);
+            }
+        }
+
+        private void PPDUpdate(object sender, EventArgs e) //Dubbele code... I KNOW...
+        {
+            double PPD = 0;
+            //Option
+            if (cbKammen.IsChecked == true)
+            {
+                PPD += 0.3;
+            }
+            if (cbWassen.IsChecked == true)
+            {
+                PPD += 0.5;
+            }
+            if (cbGebruikStapmolen.IsChecked == true)
+            {
+                PPD += 1;
+            }
+            if (cbHoefsmid.IsChecked == true)
+            {
+                PPD += 0.5;
+            }
+            if (cbGedragstherapie.IsChecked == true)
+            {
+                PPD += 2;
+            }
+            if (cbKnippen.IsChecked == true)
+            {
+                PPD += 0.4;
+            }
+            if (cbLuxeVoedeing.IsChecked == true)
+            {
+                PPD += 0.5;
+            }
+            if (cbBorstelen.IsChecked == true)
+            {
+                PPD += 2;
+            }
+            //Package
+            if (cbRes.Text != "") PPD += Recidency.PackagePrice(cbRes.Text);
+            txtOutput.Content = $"Price Per Day: {PPD}€";
+        }
+
+        /*private void History_GotFocus(object sender, RoutedEventArgs e)
+        {
+            List<Recidency> recidencies = Recidency.GetUserHistoryRecidencies(User_ID);
+            DG_History.ItemsSource = recidencies;
+            DG_History.IsReadOnly = true;
+        }*/
+
+        private void btnDetails_Click(object sender, RoutedEventArgs e)
+        {
+            Recidency recidency = this.DG_History.SelectedItem as Recidency;
+
+            new Residency_Details(recidency.Pet_ID, recidency.ID).Show();
+        }
+        int y = 0;
+        private void Verblijven_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (y == 0)
+            {
+                List<Recidency> recidencies = Recidency.GetUserHistoryRecidencies(User_ID);
+                DG_History.ItemsSource = recidencies;
+                DG_History.IsReadOnly = true;
+                y++;
+            }
+
+        }
     }
 }

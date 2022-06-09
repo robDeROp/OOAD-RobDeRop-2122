@@ -1,0 +1,33 @@
+﻿<Window x:Class="slnGebruiker.Residency_Details"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:slnGebruiker"
+        mc:Ignorable="d"
+        Title="Residency_Details" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Huisdier-details" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <Image x:Name="img_P" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="CB_P" Grid.Row="0" Height="20" Width="250" VerticalAlignment="Top" Margin="75,39,75,0" SelectionChanged="CB_P_SelectionChanged"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Recidentie-details" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <Image x:Name="img_R" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <ComboBox x:Name="CB_R" Grid.Row="0" Height="20" Width="250" VerticalAlignment="Top" Margin="75,39,75,0" SelectionChanged="CB_R_SelectionChanged"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

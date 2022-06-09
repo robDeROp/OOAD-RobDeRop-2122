@@ -38,10 +38,10 @@
         <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
         <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
         <TextBox x:Name="txtOpmerking" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtGeslacht" Grid.Row="3" Grid.Column="2" Height="20" Margin="0,17,0,18"/>
+        <ComboBox x:Name="cbGeslacht" Grid.Row="3" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
         <TextBox x:Name="txtGroote" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
         <TextBox x:Name="txtLeeftijd" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtEigenaar" Grid.Row="6" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtType" Grid.Row="7" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+        <ComboBox x:Name="cbUser" Grid.Row="6" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cbType" Grid.Row="7" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
     </Grid>
 </Window>

@@ -25,7 +25,7 @@
                     </Grid.RowDefinitions>
                     <Label Content="RECIDENTIAL INFO" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
 
-                    <DatePicker x:Name="dtStartDate" Grid.Row="1" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" DisplayDate="2022-09-06"/>
+                    <DatePicker x:Name="dtStartDate" Grid.Row="1" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" />
                     <Label Grid.Row="1" Content="Start Datum:" Height="25" VerticalAlignment="Top"/>
 
                     <DatePicker x:Name="dtEndDate" Grid.Row="2" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" />
@@ -48,10 +48,10 @@
                     <TextBox x:Name="txtUserID" Grid.Row="1" Height="25" VerticalAlignment="Bottom" IsReadOnly="True"/>
                     <Label Grid.Row="1" Content="User ID:" Height="25" VerticalAlignment="Top"/>
 
-                    <ComboBox x:Name="cbPet" Grid.Row="2" Height="25" VerticalAlignment="Bottom"/>
+                    <ComboBox x:Name="cbPet" Grid.Row="2" Height="25" VerticalAlignment="Bottom" DropDownClosed="cbPet_DropDownClosed" />
                     <Label Grid.Row="2" Content="Huisdier Selecteren:" Height="25" VerticalAlignment="Top"/>
 
-                    <ComboBox x:Name="cbRes" Grid.Row="3" Height="25" VerticalAlignment="Bottom" SelectionChanged="PPDUpdate"/>
+                    <ComboBox x:Name="cbRes" Grid.Row="3" Height="25" VerticalAlignment="Bottom" DropDownClosed="PPDUpdate" IsEnabled="False" />
                     <Label Grid.Row="3" Content="Verblijf Selceteren:" Height="25" VerticalAlignment="Top"/>
 
                     <Grid Grid.Row="4">
@@ -93,9 +93,67 @@
                 </Grid>
             </Grid>
         </TabItem>
-        <TabItem x:Name="Huisdieren" Header="Huisdier Aanmaken" Margin="0" Padding="10,5">
+        <TabItem x:Name="Huisdieren" Header="Huisdier registreren" Margin="0" Padding="10,5" Loaded="Huisdieren_Loaded">
             <Grid>
-                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="161*"/>
+                        <ColumnDefinition Width="200*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="8" Background="#FFD5FFCA" Click="btnSave_Click"/>
+
+                    <Label Content="User ID:" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Naam:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Opmerking:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Geslacht:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Groote:" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Leeftijd:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label Content="Type:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
+                    <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+                    <TextBox x:Name="txtOpmerking" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+                    <ComboBox x:Name="cbGeslacht" Grid.Row="3" Grid.Column="2" Height="25" VerticalAlignment="Bottom"/>
+                    <TextBox x:Name="txtGroote" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+                    <TextBox x:Name="txtLeeftijd" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
+                    <ComboBox x:Name="cbType" Grid.Row="6" Grid.Column="2" Height="25" VerticalAlignment="Bottom"/>
+                </Grid>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="Verblijven" Header="Verbijven" Margin="0" Padding="10,5" GotFocus="Verblijven_GotFocus">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <DataGrid AutoGenerateColumns="False" 
+                      Height="200" 
+                      HorizontalAlignment="Left" 
+                      Name="DG_History" 
+                      VerticalAlignment="Top" 
+                      Width="600" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE" Grid.ColumnSpan="2">
+                    <DataGrid.Columns >
+                        <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID"/>
+                        <DataGridTextColumn Binding="{Binding Path=StartDate}" Header="Start Dag"/>
+                        <DataGridTextColumn Binding="{Binding Path=EndDate}" Header="Eind Dag"/>
+                        <DataGridTextColumn Binding="{Binding Path=Remarks}" Header="Opmerking"/>
+                        <DataGridTextColumn Binding="{Binding Path=Package}" Header="Paket"/>
+                        <DataGridTextColumn Binding="{Binding Path=Pet}" Header="Huisdier"/>
+                        <DataGridTextColumn Binding="{Binding Path=Status}" Header="Status"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button x:Name="btnDetails" Grid.Column="1" Height="50" Content="View Details" VerticalAlignment="Top" Click="btnDetails_Click"/>
             </Grid>
         </TabItem>
     </TabControl>

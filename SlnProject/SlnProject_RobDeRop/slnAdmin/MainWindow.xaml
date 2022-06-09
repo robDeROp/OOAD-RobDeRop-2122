@@ -15,7 +15,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <DataGrid AutoGenerateColumns="False" 
-                      Height="200" 
+                      Height="440" 
                       HorizontalAlignment="Left" 
                       Name="DG_Overzicht" 
                       VerticalAlignment="Top" 

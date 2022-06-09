@@ -27,7 +27,7 @@ namespace slnGebruiker
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if (User.AdminLogin(UserName.Text, Password.Text))
+            if (User.UserLogin(UserName.Text, Password.Text))
             {
                 Message.Content = $"Welcome {UserName.Text}, we are logging you in, thanks for your patience.";
                 int ID = User.GetUserID(UserName.Text, Password.Text);

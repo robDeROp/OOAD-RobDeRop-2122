@@ -50,14 +50,14 @@ namespace ClassLibrary_Dierenhotel
                 return pets;
             }
         }
-        static public List<BitmapImage> GetPetImage(Pet p)
+        static public List<BitmapImage> GetPetImage(int p_id)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
                 List<BitmapImage> img = new List<BitmapImage>();
                 SqlCommand comm = new SqlCommand("Select data FROM Photo Where pet_id = @par1", conn);
-                comm.Parameters.AddWithValue("@par1", p.ID);
+                comm.Parameters.AddWithValue("@par1", p_id);
                 SqlDataReader reader = comm.ExecuteReader();
                 while (reader.Read())
                 {
@@ -71,7 +71,7 @@ namespace ClassLibrary_Dierenhotel
                 return img;
             }
         }
-        static public void UploadImage(string i, Pet p, int r)
+        static public void UploadImage(string i, int p, int r)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -80,7 +80,7 @@ namespace ClassLibrary_Dierenhotel
                 using (SqlCommand comm = new SqlCommand("INSERT INTO [DierenhotelDB].[dbo].[Photo] (data, pet_id, residency_id) VALUES(@par1, @par2, @par3);", conn))
                 {
                     comm.Parameters.AddWithValue("@par1", imageData);
-                    comm.Parameters.AddWithValue("@par2", p.ID);
+                    comm.Parameters.AddWithValue("@par2", p);
                     comm.Parameters.AddWithValue("@par3", r);
                     comm.ExecuteNonQuery();
                 }
@@ -177,6 +177,21 @@ namespace ClassLibrary_Dierenhotel
                 name = reader["name"].ToString();
             }
             return name;
+        }
+        static public List<string> GetTypes()
+        {
+            List<string> types = new List<string>();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT name FROM[DierenhotelDB].[dbo].[Type];", conn);
+                SqlDataReader reader = comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    types.Add(reader["name"].ToString());
+                }
+            }
+            return types;
         }
     }
 }

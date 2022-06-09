@@ -96,7 +96,7 @@ namespace slnAdmin
             {
                 cbPet.Items.Add(PetName);
             }
-            List<string> Packages = Recidency.GetPackages();
+            List<string> Packages = Recidency.GetPackages(cbPet.Text);
             foreach (string PackageName in Packages)
             {
                 cbRes.Items.Add(PackageName);

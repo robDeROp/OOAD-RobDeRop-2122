@@ -38,6 +38,22 @@ namespace ClassLibrary_Dierenhotel
                 return recidenies;
             }
         }
+        static public List<Recidency> GetUserHistoryRecidencies(int UID)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT R.[id],R.[startdate],R.[enddate],R.[remarks],R.[package_id], P.[name] as packageName,R.[pet_id], D.[name] as petName, confirmed FROM [DierenhotelDB].[dbo].[Residency] R INNER JOIN [DierenhotelDB].[dbo].Package P ON P.[id] = R.package_id INNER JOIN [DierenhotelDB].[dbo].[Pet] D ON D.id = R.pet_id WHERE D.user_id = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", UID);
+                SqlDataReader reader = comm.ExecuteReader();
+                List<Recidency> recidenies = new List<Recidency>();
+                while (reader.Read())
+                {
+                    recidenies.Add(new Recidency() { ID = Convert.ToInt32(reader["id"]), StartDate = reader["startdate"].ToString(), EndDate = reader["enddate"].ToString(), Remarks = reader["remarks"].ToString(), Package_ID = int.Parse(reader["package_id"].ToString()), Package = reader["packageName"].ToString(), Pet_ID = int.Parse(reader["pet_id"].ToString()), Pet = reader["petName"].ToString(), Status = reader["confirmed"].ToString() });
+                }
+                return recidenies;
+            }
+        }
         static public List<int> getOptionsByID (int ID)
         {
             List<int> options = new List<int>();
@@ -92,14 +108,14 @@ namespace ClassLibrary_Dierenhotel
 
             }
         }
-        static public List<BitmapImage> GetResImage(Recidency r)
+        static public List<BitmapImage> GetResImage(int r_id)
         {
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
                 List<BitmapImage> img = new List<BitmapImage>();
                 SqlCommand comm = new SqlCommand("Select data FROM Photo Where residency_id = @par1", conn);
-                comm.Parameters.AddWithValue("@par1", r.ID);
+                comm.Parameters.AddWithValue("@par1", r_id);
                 SqlDataReader reader = comm.ExecuteReader();
                 while (reader.Read())
                 {
@@ -148,13 +164,14 @@ namespace ClassLibrary_Dierenhotel
             return RID;
         }
         //Get Verblijven
-        static public List<string> GetPackages()
+        static public List<string> GetPackages(string PetName)//Gefilterd op pet Type
         {
             List<string> packeges = new List<string>();
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT name FROM [DierenhotelDB].[dbo].[Package];", conn);
+                SqlCommand comm = new SqlCommand("SELECT P.name FROM [DierenhotelDB].[dbo].[Package] P INNER JOIN [DierenhotelDB].[dbo].[Pet] D ON D.[type_name] = P.pettype_name WHERE D.name = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", PetName);
                 SqlDataReader reader = comm.ExecuteReader();
                 while (reader.Read())
                 {
@@ -212,6 +229,20 @@ namespace ClassLibrary_Dierenhotel
                 comm.Parameters.AddWithValue("@par1", PID);
                 comm.Parameters.AddWithValue("@par2", OID);
                 SqlDataReader reader = comm.ExecuteReader();
+            }
+        }
+        static public double PackagePrice(string Name)
+        {
+            double price = 0;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT priceperday FROM [DierenhotelDB].[dbo].[Package] WHERE name = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", Name);
+                SqlDataReader reader = comm.ExecuteReader();
+                reader.Read();
+                price = double.Parse(reader["priceperday"].ToString());
+                return price;
             }
         }
     }

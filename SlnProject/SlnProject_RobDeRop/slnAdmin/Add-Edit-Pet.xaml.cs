@@ -27,16 +27,29 @@ namespace slnAdmin
             MainWindow = temp;
             M = Mode;
             InitializeComponent();
+            List<string> Type = Pet.GetTypes();
+            foreach (string type in Type)
+            {
+                cbType.Items.Add(type);
+            }
+            List<User> users = User.GetAllUsers();
+            foreach (User user in users)
+            {
+                cbUser.Items.Add(user.ID + ". (" + user.Login + ") " + user.Fname + " " + user.Lname);
+            }
+            cbGeslacht.Items.Add("M");
+            cbGeslacht.Items.Add("F");
+            cbGeslacht.Items.Add("X");
             if (M == 0)
             {
+                cbGeslacht.SelectedIndex = int.Parse(pet.Sex) - 1;
+                cbType.SelectedIndex = int.Parse(pet.Type) - 1;
+                cbUser.SelectedIndex = int.Parse(pet.Owner_ID) - 1;
                 txtID.Text = pet.ID.ToString();
                 txtNaam.Text = pet.Name;
                 txtOpmerking.Text = pet.Remarks;
-                txtGeslacht.Text = pet.Sex;
                 txtGroote.Text = pet.Size;
                 txtLeeftijd.Text = pet.Age;
-                txtEigenaar.Text = pet.Owner_ID;
-                txtType.Text = pet.Type;
             }
             else
             {
@@ -51,29 +64,21 @@ namespace slnAdmin
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            Pet pet = new Pet();
+            pet.Name = txtNaam.Text;
+            pet.Remarks = txtOpmerking.Text;
+            pet.Sex = (cbGeslacht.SelectedIndex + 1).ToString();
+            pet.Size = txtGroote.Text;
+            pet.Owner_ID = (cbUser.SelectedIndex + 1).ToString();
+            pet.Age = txtLeeftijd.Text;
+            pet.Type = (cbType.SelectedIndex + 1).ToString();
             if (M == 0) //For editing a user
-            { 
-                Pet pet = new Pet();
+            {
                 pet.ID = int.Parse(txtID.Text);
-                pet.Name = txtNaam.Text;
-                pet.Remarks = txtOpmerking.Text;
-                pet.Sex = txtGeslacht.Text;
-                pet.Size = txtGroote.Text;
-                pet.Owner_ID = txtEigenaar.Text;
-                pet.Age = txtLeeftijd.Text;
-                pet.Type = txtType.Text;
                 Pet.UpdatePet(pet);
             }
             else if (M == 1)
             {
-                Pet pet = new Pet();
-                pet.Name = txtNaam.Text;
-                pet.Remarks = txtOpmerking.Text;
-                pet.Sex = txtGeslacht.Text;
-                pet.Size = txtGroote.Text;
-                pet.Owner_ID = txtEigenaar.Text;
-                pet.Age = txtLeeftijd.Text;
-                pet.Type = txtType.Text;
                 Pet.CreatePet(pet);
             }
             else
