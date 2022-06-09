@@ -90,12 +90,11 @@
                         <RowDefinition Height="5*"/>
                     </Grid.RowDefinitions>
                     <Label Content="Search:" Height="30" Grid.Row="0"/>
-                    <TextBox x:Name="txbSearch_P" Height="20" Width="180" Grid.Row="1" TextChanged="txbSearch_TextChanged"/>
+                    <TextBox x:Name="txbSearch_P" Height="20" Width="180" Grid.Row="1" TextChanged="txbSearch_P_TextChanged" />
                     <Button x:Name="btnEdit_P" Content="Aanpassen" Grid.Row="2" Click="btnEdit_P_Click" />
                     <Button x:Name="btnAdd_P" Content="Toevoegen" Grid.Row="3" Click="btnAdd_P_Click" />
                     <Button x:Name="btnDelete_P" Content="Verwijder" Grid.Row="4" Click="btnDelete_P_Click"  />
                     <Button x:Name="btnDetails_P" Content="Details" Grid.Row="5" Click="btnDetails_P_Click" />
-
                 </Grid>
             </Grid>
         </TabItem>
@@ -123,6 +122,7 @@
                             <DataGridTextColumn Binding="{Binding Path=Remarks}" Header="Opmerking"/>
                             <DataGridTextColumn Binding="{Binding Path=Package}" Header="Paket"/>
                             <DataGridTextColumn Binding="{Binding Path=Pet}" Header="Huisdier"/>
+                            <DataGridTextColumn Binding="{Binding Path=Status}" Header="Status"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -132,12 +132,19 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
-                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="btnEdit_V" Content="Aanpassen" Grid.Row="0" Click="btnEdit_V_Click" />
-                    <Button x:Name="btnAdd_V" Content="Toevoegen" Grid.Row="1" Click="btnAdd_V_Click" />
-                    <Button x:Name="btnDelete_V" Content="Verwijder" Grid.Row="2" Height="36" VerticalAlignment="Top" Click="btnDelete_V_Click" />
-                    <Button x:Name="btnDetails_V" Content="Details" Grid.Row="3" Click="btnDetails_V_Click" />
+                    <Label Content="Search:" Height="30" Grid.Row="0"/>
+                    <TextBox x:Name="txbSearch_V" Height="20" Width="180" Grid.Row="1" TextChanged="txbSearch_V_TextChanged" />
+                    <Button x:Name="btnEdit_V" Content="Aanpassen" Grid.Row="2" Click="btnEdit_V_Click" />
+                    <Button x:Name="btnAdd_V" Content="Toevoegen" Grid.Row="3" Click="btnAdd_V_Click" />
+                    <Button x:Name="btnDelete_V" Content="Verwijder" Grid.Row="4" Height="36" VerticalAlignment="Top" Click="btnDelete_V_Click" />
+                    <Button x:Name="btnDetails_V" Content="Details" Grid.Row="5" Click="btnDetails_V_Click" />
+                    <Button x:Name="btnAccept_Deny" Content="ChangeStatus" Grid.Row="6" Click="btnAccept_Deny_Click" />
+
                 </Grid>
             </Grid>
         </TabItem>

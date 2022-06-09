@@ -23,23 +23,24 @@ namespace slnAdmin
     {
         DataGrid MainWindow = null;
         int M = 0;
+        Recidency r = null;
         public Add_Edit_Verblijf(Recidency recidency, int Mode, DataGrid temp)
         {
+            r   = recidency;
             MainWindow = temp;
             M = Mode;
             InitializeComponent();
-            if (M == 0)
+            List<User> users =  User.GetAllUsers();
+            foreach (User user in users)
             {
-                txtID.Text = recidency.ID.ToString();
-                txtEndDate.Text = recidency.EndDate.ToString();
-                txtPackage_ID.Text = recidency.Package_ID.ToString();
-                txtPet_ID.Text = recidency.Pet_ID.ToString();
-                txtRemarks.Text = recidency.Remarks.ToString();
-                txtStartDate.Text = recidency.StartDate.ToString();
+                cbUser.Items.Add( user.ID + ". (" + user.Login + ") " + user.Fname + " " + user.Lname);
             }
-            else
+            if(M == 0)
             {
-                txtID.Text = "ID is auto generated";
+                dtEndDate.Text = recidency.EndDate.ToString();
+                dtStartDate.Text = recidency.StartDate.ToString();
+                int UID = Recidency.getUserIDByRecidency(recidency.ID);
+                cbUser.SelectedIndex = UID - 1;
             }
         }
 
@@ -50,7 +51,7 @@ namespace slnAdmin
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (M == 0) //For editing a user
+           /* if (M == 0) //For editing a user
             {
                 Recidency recidency = new Recidency();
                 recidency.ID = int.Parse(txtID.Text);
@@ -74,7 +75,7 @@ namespace slnAdmin
             else
             {
                 MessageBox.Show("Internal Error, Could not execute this command");
-            }
+            }*/
             this.MainWindow.ItemsSource = null;
             RefreshGrid();
             this.Close();
@@ -88,6 +89,26 @@ namespace slnAdmin
                 this.MainWindow.ItemsSource = Data;
             }
             this.MainWindow.IsReadOnly = true;
+        }
+
+        private void btnAanvragen_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

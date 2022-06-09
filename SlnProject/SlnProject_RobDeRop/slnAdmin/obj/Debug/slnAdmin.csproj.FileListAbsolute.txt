@@ -22,11 +22,11 @@ C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRo
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\slnAdmin.exe
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\slnAdmin.pdb
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\bin\Debug\ClassLibrary-Dierenhotel.dll.config
-C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Huisdieren.g.cs
-C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Huisdieren.baml
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Add-Edit-Pet.g.cs
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Add-Edit-Verblijf.g.cs
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Pet_Details.g.cs
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Add-Edit-Pet.baml
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Add-Edit-Verblijf.baml
 C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Pet_Details.baml
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Recidency_Details.g.cs
+C:\Users\robde\Documents\GitHub\OOAD-RobDeRop-2122\SlnProject\SlnProject_RobDeRop\slnAdmin\obj\Debug\Recidency_Details.baml

@@ -5,8 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:slnGebruiker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="500" Width="800">
+    <TabControl SelectedIndex="0" >
+        <TabItem x:Name="Residency" Header="Verblijf Aanvragen" Margin="0" Padding="10,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="RECIDENTIAL INFO" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
+
+                    <DatePicker x:Name="dtStartDate" Grid.Row="1" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" DisplayDate="2022-09-06"/>
+                    <Label Grid.Row="1" Content="Start Datum:" Height="25" VerticalAlignment="Top"/>
+
+                    <DatePicker x:Name="dtEndDate" Grid.Row="2" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" />
+                    <Label Grid.Row="2" Content="Stop Datum:" Height="25" VerticalAlignment="Top"/>
+
+                    <TextBox x:Name="txtResRemarks" Grid.Row="3" Height="25" VerticalAlignment="Bottom"/>
+                    <Label Grid.Row="3" Content="Opmerking:" Height="25" VerticalAlignment="Top"/>
+
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="USER INFO" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
+
+                    <TextBox x:Name="txtUserID" Grid.Row="1" Height="25" VerticalAlignment="Bottom" IsReadOnly="True"/>
+                    <Label Grid.Row="1" Content="User ID:" Height="25" VerticalAlignment="Top"/>
+
+                    <ComboBox x:Name="cbPet" Grid.Row="2" Height="25" VerticalAlignment="Bottom"/>
+                    <Label Grid.Row="2" Content="Huisdier Selecteren:" Height="25" VerticalAlignment="Top"/>
+
+                    <ComboBox x:Name="cbRes" Grid.Row="3" Height="25" VerticalAlignment="Bottom" SelectionChanged="PPDUpdate"/>
+                    <Label Grid.Row="3" Content="Verblijf Selceteren:" Height="25" VerticalAlignment="Top"/>
+
+                    <Grid Grid.Row="4">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Selecteer Opties:"/>
+                        <CheckBox Grid.Row="1" x:Name="cbKammen" Content="Kammen" Click="PPDUpdate" />
+                        <CheckBox Grid.Row="2" x:Name="cbWassen" Content="Wassen" Click="PPDUpdate"/>
+                        <CheckBox Grid.Row="3" x:Name="cbGebruikStapmolen" Content="Gebruik stapmolen" Click="PPDUpdate"/>
+                        <CheckBox Grid.Row="4" x:Name="cbHoefsmid" Content="Hoefsmid" Click="PPDUpdate"/>
+                        <CheckBox Grid.Row="5" x:Name="cbGedragstherapie" Content="Gedragstherapie" Click="PPDUpdate"/>
+                        <CheckBox Grid.Row="6" x:Name="cbKnippen" Content="Knippen" Click="PPDUpdate"/>
+                        <CheckBox Grid.Row="7" x:Name="cbLuxeVoedeing" Content="LuxeVoeding" Click="PPDUpdate"/>
+                        <CheckBox Grid.Row="8" x:Name="cbBorstelen" Content="Borstelen" Click="PPDUpdate"/>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnAanvragen" Content="Aanvragen" Grid.Row="0" Click="btnAanvragen_Click"/>
+                    <Button x:Name="Reset" Content="Reset" Grid.Row="1" Click="Reset_Click"/>
+                    <Button x:Name="Logout" Content="Log Out" Grid.Row="2" Click="Logout_Click"/>
+                    <Label Content="Totaal:" Grid.Row="3"/>
+                    <Label x:Name="txtOutput" Grid.Row="4"/>
+                </Grid>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="Huisdieren" Header="Huisdier Aanmaken" Margin="0" Padding="10,5">
+            <Grid>
+                
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>

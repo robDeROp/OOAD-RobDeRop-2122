@@ -70,6 +70,7 @@ namespace slnAdmin
             //byte[] imageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
             //string base64String = Convert.ToBase64String(imageBytes);
             Pet.UploadImage(openFileDialog.FileName, pet, 1);
+            Load();
         }
     }
 }

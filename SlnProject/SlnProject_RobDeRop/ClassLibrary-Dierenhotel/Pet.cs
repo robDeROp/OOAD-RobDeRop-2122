@@ -132,6 +132,38 @@ namespace ClassLibrary_Dierenhotel
                 SqlDataReader reader = comm.ExecuteReader();
             }
         }
-
+        //Get pet ID by Name
+        static public int GetPetId(string name, string ownerID)
+        {
+            int PetID = -1;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT id FROM [DierenhotelDB].[dbo].[Pet] WHERE name = @par1 AND user_id = @par2;", conn);
+                comm.Parameters.AddWithValue("@par1", name);
+                comm.Parameters.AddWithValue("@par2", ownerID);
+                SqlDataReader reader = comm.ExecuteReader();
+                reader.Read();
+                PetID = int.Parse(reader["id"].ToString()); 
+            }
+            return PetID;
+        }
+        // Pet names by user
+        static public List<string> GetPetNames (int ID)
+        {
+            List<string> names = new List<string>();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT name FROM[DierenhotelDB].[dbo].[Pet] WHERE user_id = @par1;", conn);
+                comm.Parameters.AddWithValue("@par1", ID);
+                SqlDataReader reader = comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    names.Add(reader["name"].ToString());
+                }
+            }
+            return names;
+        }
     }
 }

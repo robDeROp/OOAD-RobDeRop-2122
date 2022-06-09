@@ -20,7 +20,7 @@ namespace ClassLibrary_Dierenhotel
         public string CreationDate { get; set; }
         public string Password { get; set; }
         public string Function { get; set; }
-        static public bool UserLogin(string login, string password)//login Sql Query
+        static public bool AdminLogin(string login, string password)//login Sql Query
         {
             bool result = false;
             using (SqlConnection conn = new SqlConnection(connString))
@@ -44,6 +44,69 @@ namespace ClassLibrary_Dierenhotel
             }
             return result;
         }
+        static public bool UserLogin(string login, string password)//login Sql Query
+        {
+            bool result = false;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT count([id]) as C FROM [DierenhotelDB].[dbo].[User] WHERE login = @par1 AND password = @par2", conn);
+                comm.Parameters.AddWithValue("@par1", login);
+                comm.Parameters.AddWithValue("@par2", password);
+                SqlDataReader reader = comm.ExecuteReader();
+                reader.Read();
+                int c = Convert.ToInt32(reader["C"]);
+                if (c > 0)
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            return result;
+        }
+        //static public bool UserLogin(string login, string password)//login Sql Query
+        //{
+        //    bool result = false;
+        //    using (SqlConnection conn = new SqlConnection(connString))
+        //    {
+        //        conn.Open();
+        //        SqlCommand comm = new SqlCommand("SELECT count([id]) as C FROM [DierenhotelDB].[dbo].[User] WHERE login = @par1 AND password = @par2", conn);
+        //        comm.Parameters.AddWithValue("@par1", login);
+        //        comm.Parameters.AddWithValue("@par2", password);
+        //        SqlDataReader reader = comm.ExecuteReader();
+        //        reader.Read();
+        //        int c = Convert.ToInt32(reader["C"]);
+        //        if (c > 0)
+        //        {
+        //            result = true;
+        //        }
+        //        else
+        //        {
+        //            result = false;
+        //        }
+        //    }
+        //    return result;
+        //}
+        static public int GetUserID(string login, string password)
+        {
+            int result = 0;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT id FROM [DierenhotelDB].[dbo].[User] WHERE login = @par1 AND password = @par2", conn);
+                comm.Parameters.AddWithValue("@par1", login);
+                comm.Parameters.AddWithValue("@par2", password);
+                SqlDataReader reader = comm.ExecuteReader();
+                reader.Read();
+                result = Convert.ToInt32(reader["id"]);
+
+            }
+            return result;
+        }
+
         //Main Window Dashboard, get all user data
         static public List<User> GetAllUsers()
         {

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,15 +20,15 @@ namespace slnAdmin
     /// </summary>
     public partial class Login : Window
     {
-        string connString = ConfigurationManager.AppSettings["connString"];
 
         public Login()
         {
             InitializeComponent();
         }
+
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if(User.UserLogin(UserName.Text, Password.Text))
+            if(User.AdminLogin(UserName.Text, Password.Text))
             {
                 Message.Content = $"Welcome {UserName.Text}, we are logging you in, thanks for your patience.";
                 new MainWindow().Show();
