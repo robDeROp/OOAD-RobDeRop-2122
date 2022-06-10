@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:slnGebruiker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="509" Width="923">
     <TabControl SelectedIndex="0" >
         <TabItem x:Name="Residency" Header="Verblijf Aanvragen" Margin="0" Padding="10,5">
             <Grid>
@@ -25,10 +25,10 @@
                     </Grid.RowDefinitions>
                     <Label Content="RECIDENTIAL INFO" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
 
-                    <DatePicker x:Name="dtStartDate" Grid.Row="1" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" />
+                    <DatePicker x:Name="dtStartDate" Grid.Row="1" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" SelectedDateChanged="PPDUpdate" />
                     <Label Grid.Row="1" Content="Start Datum:" Height="25" VerticalAlignment="Top"/>
 
-                    <DatePicker x:Name="dtEndDate" Grid.Row="2" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" />
+                    <DatePicker x:Name="dtEndDate" Grid.Row="2" FirstDayOfWeek="Monday" Height="25" VerticalAlignment="Bottom" SelectedDateChanged="PPDUpdate" />
                     <Label Grid.Row="2" Content="Stop Datum:" Height="25" VerticalAlignment="Top"/>
 
                     <TextBox x:Name="txtResRemarks" Grid.Row="3" Height="25" VerticalAlignment="Bottom"/>
@@ -88,7 +88,7 @@
                     <Button x:Name="btnAanvragen" Content="Aanvragen" Grid.Row="0" Click="btnAanvragen_Click"/>
                     <Button x:Name="Reset" Content="Reset" Grid.Row="1" Click="Reset_Click"/>
                     <Button x:Name="Logout" Content="Log Out" Grid.Row="2" Click="Logout_Click"/>
-                    <Label Content="Totaal:" Grid.Row="3"/>
+                    <Label x:Name="txtTotaal" Grid.Row="3"/>
                     <Label x:Name="txtOutput" Grid.Row="4"/>
                 </Grid>
             </Grid>
@@ -124,10 +124,10 @@
                     <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
                     <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
                     <TextBox x:Name="txtOpmerking" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-                    <ComboBox x:Name="cbGeslacht" Grid.Row="3" Grid.Column="2" Height="25" VerticalAlignment="Bottom"/>
+                    <ComboBox x:Name="cbGeslacht" Grid.Row="3" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
                     <TextBox x:Name="txtGroote" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
                     <TextBox x:Name="txtLeeftijd" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-                    <ComboBox x:Name="cbType" Grid.Row="6" Grid.Column="2" Height="25" VerticalAlignment="Bottom"/>
+                    <ComboBox x:Name="cbType" Grid.Row="6" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
                 </Grid>
             </Grid>
         </TabItem>
@@ -138,11 +138,11 @@
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <DataGrid AutoGenerateColumns="False" 
-                      Height="200" 
-                      HorizontalAlignment="Left" 
+                      Height="434" 
+                      HorizontalAlignment="Center" 
                       Name="DG_History" 
                       VerticalAlignment="Top" 
-                      Width="600" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE" Grid.ColumnSpan="2">
+                      Width="668" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE">
                     <DataGrid.Columns >
                         <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID"/>
                         <DataGridTextColumn Binding="{Binding Path=StartDate}" Header="Start Dag"/>

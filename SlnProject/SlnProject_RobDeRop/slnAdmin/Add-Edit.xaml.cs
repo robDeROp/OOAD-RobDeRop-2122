@@ -54,36 +54,37 @@ namespace slnAdmin
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if(M == 0) //For editing a user
+            if (txtVoornaam.Text != "" && txtAchternaam.Text != "" && txtLogin.Text != "" && txtWachtwoord.Text != "" && cbRole.Text != "")
             {
                 User u = new User();
-                u.ID = int.Parse(txtID.Text);
                 u.Fname = txtVoornaam.Text;
                 u.Lname = txtAchternaam.Text;
                 u.Login = txtLogin.Text;
                 u.Password = txtWachtwoord.Text;
                 u.Function = cbRole.SelectedValue.ToString();
-                User.UpdateUser(u);
+                if (M == 0) //For editing a user
+                {
+                    u.ID = int.Parse(txtID.Text);
+                    User.UpdateUser(u);
 
-            }
-            else if (M == 1)
-            {
-                User u = new User();
-                u.Fname = txtVoornaam.Text;
-                u.Lname = txtAchternaam.Text;
-                u.Login = txtLogin.Text;
-                u.Password = txtWachtwoord.Text;
-                u.Function = cbRole.SelectedValue.ToString();
-                u.CreationDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                User.CreateUser(u);
+                }
+                else if (M == 1)
+                {
+                    u.CreationDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    User.CreateUser(u);
+                }
+                else
+                {
+                    MessageBox.Show("Internal Error, Could not execute this command");
+                }
+                this.MainWindow.ItemsSource = null;
+                RefreshGrid();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Internal Error, Could not execute this command");
+                MessageBox.Show("Error: Something went wrong, check if everthing is filled in corectly and try again.");
             }
-            this.MainWindow.ItemsSource = null;
-            RefreshGrid();
-            this.Close();
         }
         public void RefreshGrid()
         {

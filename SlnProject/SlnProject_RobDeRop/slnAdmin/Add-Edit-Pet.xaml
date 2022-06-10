@@ -5,12 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:slnAdmin"
         mc:Ignorable="d"
-        Title="Add_Edit_Pet" Height="450" Width="800">
+        Title="Add_Edit_Pet" Height="512" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="39*"/>
-            <ColumnDefinition Width="161*"/>
-            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="304*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="400*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -23,25 +25,25 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="0" Grid.Row="8" Background="#FFF9C0C0" Click="btnCancel_Click" Grid.ColumnSpan="2" />
-        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="8" Background="#FFD5FFCA" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="0" Grid.Row="8" Background="#FFF9C0C0" Click="btnCancel_Click" Grid.ColumnSpan="4" />
+        <Button x:Name="btnSave" Content="Save" Grid.Column="4" Grid.Row="8" Background="#FFD5FFCA" Click="btnSave_Click"/>
 
-        <Label Content="ID:" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Naam:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Opmerking:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Geslacht:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Groote:" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Leeftijd:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Eigenaar:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label Content="Type:" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Content="ID:" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Naam:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Opmerking:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Geslacht:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Groote:" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Leeftijd:" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Eigenaar:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <Label Content="Type:" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
 
-        <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="2" Height="20" IsReadOnly="True" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtOpmerking" Grid.Row="2" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <ComboBox x:Name="cbGeslacht" Grid.Row="3" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
-        <TextBox x:Name="txtGroote" Grid.Row="4" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <TextBox x:Name="txtLeeftijd" Grid.Row="5" Grid.Column="2" Height="20" Margin="0,17,0,17"/>
-        <ComboBox x:Name="cbUser" Grid.Row="6" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
-        <ComboBox x:Name="cbType" Grid.Row="7" Grid.Column="2" Height="25" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtID" Grid.Row="0" Grid.Column="4" Height="20" IsReadOnly="True" Margin="0,17,0,11"/>
+        <TextBox x:Name="txtNaam" Grid.Row="1" Grid.Column="4" Height="20" Margin="0,17,0,11"/>
+        <TextBox x:Name="txtOpmerking" Grid.Row="2" Grid.Column="4" Height="20" Margin="0,17,0,12"/>
+        <ComboBox x:Name="cbGeslacht" Grid.Row="3" Grid.Column="4" Height="25" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtGroote" Grid.Row="4" Grid.Column="4" Height="20" Margin="0,17,0,11"/>
+        <TextBox x:Name="txtLeeftijd" Grid.Row="5" Grid.Column="4" Height="20" Margin="0,17,0,11"/>
+        <ComboBox x:Name="cbUser" Grid.Row="6" Grid.Column="4" Height="25" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cbType" Grid.Row="7" Grid.Column="4" Height="25" VerticalAlignment="Center"/>
     </Grid>
 </Window>

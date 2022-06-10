@@ -84,7 +84,7 @@
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
             <Button x:Name="btnAanvragen" Content="Aanvragen" Grid.Row="0" Click="btnAanvragen_Click"/>
-            <Label Content="Totaal:" Grid.Row="3"/>
+            <Label x:Name="txtTotaal" Grid.Row="3"/>
             <Label x:Name="txtOutput" Grid.Row="4"/>
         </Grid>
     </Grid>

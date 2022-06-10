@@ -17,7 +17,7 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Label Content="Huisdier-details" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <Image x:Name="img_P" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image x:Name="img_P" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="131"/>
                 <ComboBox x:Name="CB_P" Grid.Row="0" Height="20" Width="250" VerticalAlignment="Top" Margin="75,39,75,0" SelectionChanged="CB_P_SelectionChanged"/>
             </Grid>
             <Grid Grid.Column="1">
@@ -25,7 +25,7 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Label Content="Recidentie-details" FontSize="24" HorizontalAlignment="Center" FontWeight="Bold"/>
-                <Image x:Name="img_R" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image x:Name="img_R" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Height="131"/>
                 <ComboBox x:Name="CB_R" Grid.Row="0" Height="20" Width="250" VerticalAlignment="Top" Margin="75,39,75,0" SelectionChanged="CB_R_SelectionChanged"/>
             </Grid>
         </Grid>

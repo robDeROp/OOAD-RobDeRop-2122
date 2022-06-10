@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,7 @@ namespace ClassLibrary_Dierenhotel
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
+                password = HashPassword(password);
                 SqlCommand comm = new SqlCommand("SELECT count([id]) as C FROM [DierenhotelDB].[dbo].[User] WHERE login = @par1 AND password = @par2 AND role = @par3", conn);
                 comm.Parameters.AddWithValue("@par1", login);
                 comm.Parameters.AddWithValue("@par2", password);
@@ -47,6 +49,7 @@ namespace ClassLibrary_Dierenhotel
         static public bool UserLogin(string login, string password)//login Sql Query
         {
             bool result = false;
+            password = HashPassword(password);
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -67,6 +70,16 @@ namespace ClassLibrary_Dierenhotel
             }
             return result;
         }
+
+        private static string HashPassword(string pw)
+        {
+            SHA256CryptoServiceProvider sha256 = new SHA256CryptoServiceProvider();
+            byte[] pwBytes = Encoding.UTF8.GetBytes(pw);
+            byte[] pwHashed = sha256.ComputeHash(pwBytes);
+            return BitConverter.ToString(pwHashed).Replace("-", string.Empty);
+        }
+
+
         //static public bool UserLogin(string login, string password)//login Sql Query
         //{
         //    bool result = false;
@@ -93,6 +106,7 @@ namespace ClassLibrary_Dierenhotel
         static public int GetUserID(string login, string password)
         {
             int result = 0;
+            password = HashPassword(password);
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -125,6 +139,7 @@ namespace ClassLibrary_Dierenhotel
         }
         static public void UpdateUser(User user)
         {
+            user.Password = User.HashPassword(user.Password);
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
@@ -141,6 +156,7 @@ namespace ClassLibrary_Dierenhotel
         //Creating a new user
         static public void CreateUser(User user)
         {
+            user.Password = User.HashPassword(user.Password);
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();

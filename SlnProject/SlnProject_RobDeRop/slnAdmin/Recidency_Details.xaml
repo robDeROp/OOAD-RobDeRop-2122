@@ -12,7 +12,7 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <Button x:Name="UploadPicture_R" Content="Upload Image" Grid.Row="0" Height="20" Width="250" VerticalAlignment="Top" Margin="0 4 0 0" Click="UploadPicture_R_Click"/>
-            <Image x:Name="imageDisp" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <Image x:Name="imageDisp" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="131"/>
             <ComboBox x:Name="SelectName_R" Grid.Row="0" Height="20" Width="250" VerticalAlignment="Top" Margin="0 30 0 0" SelectionChanged="SelectName_R_SelectionChanged"/>
         </Grid>
     </Grid>

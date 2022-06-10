@@ -15,11 +15,11 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <DataGrid AutoGenerateColumns="False" 
-                      Height="440" 
+                      Height="378" 
                       HorizontalAlignment="Left" 
                       Name="DG_Overzicht" 
                       VerticalAlignment="Top" 
-                      Width="600" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE">
+                      Width="586" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE">
                         <DataGrid.Columns >
                             <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID"/>
                             <DataGridTextColumn Binding="{Binding Path=Login}" Header="Login"/>
@@ -62,20 +62,20 @@
                         <ColumnDefinition Width="461*"/>
                     </Grid.ColumnDefinitions>
                     <DataGrid AutoGenerateColumns="False" 
-                      Height="200" 
+                      Height="377" 
                       HorizontalAlignment="Left" 
                       Name="DG_Overzicht_P" 
                       VerticalAlignment="Top" 
-                      Width="600" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE" Grid.ColumnSpan="2">
+                      Width="586" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE" Grid.ColumnSpan="2">
                         <DataGrid.Columns >
                             <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID"/>
                             <DataGridTextColumn Binding="{Binding Path=Name}" Header="naam"/>
-                            <DataGridTextColumn Binding="{Binding Path=Remarks}" Header="Opmerking"/>
                             <DataGridTextColumn Binding="{Binding Path=Sex}" Header="Geslacht"/>
                             <DataGridTextColumn Binding="{Binding Path=Size}" Header="Groote"/>
                             <DataGridTextColumn Binding="{Binding Path=Age}" Header="Leeftijd"/>
                             <DataGridTextColumn Binding="{Binding Path=Owner}" Header="Eigenaar"/>
                             <DataGridTextColumn Binding="{Binding Path=Type}" Header="Type"/>
+                            <DataGridTextColumn Binding="{Binding Path=Remarks}" Header="Opmerking"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -110,11 +110,11 @@
                         <ColumnDefinition Width="461*"/>
                     </Grid.ColumnDefinitions>
                     <DataGrid AutoGenerateColumns="False" 
-                      Height="200" 
+                      Height="390" 
                       HorizontalAlignment="Left" 
                       Name="DG_Overzicht_V" 
                       VerticalAlignment="Top" 
-                      Width="600" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE" Grid.ColumnSpan="2">
+                      Width="586" AlternationCount="1" AlternatingRowBackground="#FFDEDEDE" Grid.ColumnSpan="2">
                         <DataGrid.Columns >
                             <DataGridTextColumn Binding="{Binding Path=ID}" Header="ID"/>
                             <DataGridTextColumn Binding="{Binding Path=StartDate}" Header="Start Dag"/>

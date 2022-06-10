@@ -64,31 +64,37 @@ namespace slnAdmin
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            Pet pet = new Pet();
-            pet.Name = txtNaam.Text;
-            pet.Remarks = txtOpmerking.Text;
-            pet.Sex = (cbGeslacht.SelectedIndex + 1).ToString();
-            pet.Size = txtGroote.Text;
-            pet.Owner_ID = (cbUser.SelectedIndex + 1).ToString();
-            pet.Age = txtLeeftijd.Text;
-            pet.Type = (cbType.SelectedIndex + 1).ToString();
-            if (M == 0) //For editing a user
+            if (txtNaam.Text != "" && txtOpmerking.Text != "" && txtGroote.Text != "" && txtLeeftijd.Text != "" && cbType.Text != "" && cbUser.Text != "" && cbGeslacht.Text != "")
             {
-                pet.ID = int.Parse(txtID.Text);
-                Pet.UpdatePet(pet);
-            }
-            else if (M == 1)
-            {
-                Pet.CreatePet(pet);
+                Pet pet = new Pet();
+                pet.Name = txtNaam.Text;
+                pet.Remarks = txtOpmerking.Text;
+                pet.Sex = (cbGeslacht.SelectedIndex + 1).ToString();
+                pet.Size = txtGroote.Text;
+                pet.Owner_ID = (cbUser.SelectedIndex + 1).ToString();
+                pet.Age = txtLeeftijd.Text;
+                pet.Type = cbType.Text;
+                if (M == 0) //For editing a user
+                {
+                    pet.ID = int.Parse(txtID.Text);
+                    Pet.UpdatePet(pet);
+                }
+                else if (M == 1)
+                {
+                    Pet.CreatePet(pet);
+                }
+                else
+                {
+                    MessageBox.Show("Internal Error, Could not execute this command");
+                }
+                this.MainWindow.ItemsSource = null;
+                RefreshGrid();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Internal Error, Could not execute this command");
+                MessageBox.Show("Error: Something went wrong, check if everthing is filled in corectly and try again.");
             }
-            this.MainWindow.ItemsSource = null;
-            RefreshGrid();
-            this.Close();
-
         }
         public void RefreshGrid()
         {

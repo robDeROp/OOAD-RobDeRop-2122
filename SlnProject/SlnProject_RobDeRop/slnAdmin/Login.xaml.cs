@@ -28,15 +28,18 @@ namespace slnAdmin
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if(User.AdminLogin(UserName.Text, Password.Text))
+            if (UserName.Text != "" && Password.Text != "")
             {
-                Message.Content = $"Welcome {UserName.Text}, we are logging you in, thanks for your patience.";
-                new MainWindow().Show();
-                this.Close();
-            }
-            else
-            {
-                Message.Content = $"Error, cannot log you in. Try again please.";
+                if (User.AdminLogin(UserName.Text, Password.Text))
+                {
+                    Message.Content = $"Welcome {UserName.Text}, we are logging you in, thanks for your patience.";
+                    new MainWindow().Show();
+                    this.Close();
+                }
+                else
+                {
+                    Message.Content = $"Error, cannot log you in. Try again please.";
+                }
             }
         }
 

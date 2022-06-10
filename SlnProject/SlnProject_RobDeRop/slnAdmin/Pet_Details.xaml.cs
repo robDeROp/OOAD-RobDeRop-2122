@@ -63,13 +63,21 @@ namespace slnAdmin
 
         private void UploadPicture_Click(object sender, RoutedEventArgs e)
         {
-            openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
-            openFileDialog.ShowDialog();
-            //Bitmap myBitmap = new Bitmap(openFileDialog.FileName);
-            //MessageBox.Show(myBitmap.ToString());
-            //byte[] imageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
-            //string base64String = Convert.ToBase64String(imageBytes);
-            Pet.UploadImage(openFileDialog.FileName, pet.ID, -1);
+            try
+            {
+                openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
+                openFileDialog.ShowDialog();
+                //Bitmap myBitmap = new Bitmap(openFileDialog.FileName);
+                //MessageBox.Show(myBitmap.ToString());
+                //byte[] imageBytes = System.IO.File.ReadAllBytes(openFileDialog.FileName);
+                //string base64String = Convert.ToBase64String(imageBytes);
+                Pet.UploadImage(openFileDialog.FileName, pet.ID, -1);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Internal Error: " + ex.Message);
+            }
+
             Load();
         }
     }

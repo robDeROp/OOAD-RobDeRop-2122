@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:slnAdmin"
         mc:Ignorable="d"
         Title="Add_Edit" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid>
+    <Grid Margin="0,0,0,-16">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="39*"/>
             <ColumnDefinition Width="161*"/>

@@ -38,11 +38,19 @@ namespace slnGebruiker
         private void btnAanvragen_Click(object sender, RoutedEventArgs e)
         {
             Recidency recidency = new Recidency();
-            recidency.StartDate = dtStartDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
-            recidency.EndDate = dtEndDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
-            recidency.Remarks = txtResRemarks.Text;
-            recidency.Pet_ID = Pet.GetPetId(cbPet.Text, txtUserID.Text.ToString());
-            recidency.Status = "0";
+            try
+            {
+                recidency.StartDate = dtStartDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
+                recidency.EndDate = dtEndDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
+                recidency.Remarks = txtResRemarks.Text;
+                recidency.Pet_ID = Pet.GetPetId(cbPet.Text, txtUserID.Text.ToString());
+                recidency.Status = "0";
+            }
+            catch
+            {
+                MessageBox.Show("Error: Something went wrong, check if everthing is filled in corectly and try again.");
+            }
+
             //Options
             List<int> options = new List<int>();
             if (cbKammen.IsChecked == true)
@@ -80,8 +88,15 @@ namespace slnGebruiker
             recidency.Options = options;
             //Package
             recidency.Package_ID = cbRes.SelectedIndex;
-            
-            Recidency.VerblijfAanvragen(recidency);
+            try
+            {
+                Recidency.VerblijfAanvragen(recidency);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
@@ -98,6 +113,16 @@ namespace slnGebruiker
 
         private void PPDUpdate(object sender, RoutedEventArgs e)
         {
+            bool DaysFilledIn = false;
+            int Days = 0;
+            if(dtEndDate.SelectedDate != null && dtStartDate.SelectedDate != null)
+            {
+                DaysFilledIn = true;
+                DateTime StartDate = this.dtStartDate.SelectedDate.Value.Date;
+                DateTime EndDate = this.dtEndDate.SelectedDate.Value.Date;
+                double TotalDays = (EndDate - StartDate).TotalDays;
+                Days = int.Parse(Math.Floor(TotalDays).ToString());
+            }
             double PPD = 0;
             //Option
             if (cbKammen.IsChecked == true)
@@ -135,6 +160,7 @@ namespace slnGebruiker
             //Package
             if (cbRes.Text != "") PPD += Recidency.PackagePrice(cbRes.Text);
             txtOutput.Content = $"Price Per Day: {PPD}€";
+            if(DaysFilledIn) txtTotaal.Content = $"Total price for {Days} days is {PPD * Days}€";
         }
 
         private void Huisdieren_Loaded(object sender, RoutedEventArgs e)
@@ -152,26 +178,33 @@ namespace slnGebruiker
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             Pet p = new Pet();
-            p.Name = txtNaam.Text;
-            p.Age = txtLeeftijd.Text;
-            p.Owner_ID = User_ID.ToString();
-            p.Size = txtGroote.Text;
-            p.Remarks = txtOpmerking.Text;
-            p.Sex = cbGeslacht.SelectedIndex + 1.ToString();
-            p.Type = cbType.Text;
-            Pet.CreatePet(p);
-            txtNaam.Clear();
-            txtLeeftijd.Clear();
-            txtGroote.Clear();
-            txtOpmerking.Clear();
-            cbGeslacht.Text="";
-            cbType.Text="";
-            List<string> PetNames = Pet.GetPetNames(User_ID);
-            cbPet.Items.Clear();
-
-            foreach (string PetName in PetNames)
+            if (txtNaam.Text != "" && txtLeeftijd.Text != "" && txtGroote.Text != "" && txtOpmerking.Text != "" && cbGeslacht.Text != "" && cbType.Text != "")
             {
-                cbPet.Items.Add(PetName);
+                p.Name = txtNaam.Text;
+                p.Age = txtLeeftijd.Text;
+                p.Owner_ID = User_ID.ToString();
+                p.Size = txtGroote.Text;
+                p.Remarks = txtOpmerking.Text;
+                p.Sex = cbGeslacht.SelectedIndex + 1.ToString();
+                p.Type = cbType.Text;
+                Pet.CreatePet(p);
+                txtNaam.Clear();
+                txtLeeftijd.Clear();
+                txtGroote.Clear();
+                txtOpmerking.Clear();
+                cbGeslacht.Text = "";
+                cbType.Text = "";
+                List<string> PetNames = Pet.GetPetNames(User_ID);
+                cbPet.Items.Clear();
+
+                foreach (string PetName in PetNames)
+                {
+                    cbPet.Items.Add(PetName);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
             }
         }
 
@@ -189,6 +222,16 @@ namespace slnGebruiker
 
         private void PPDUpdate(object sender, EventArgs e) //Dubbele code... I KNOW...
         {
+            bool DaysFilledIn = false;
+            int Days = 0;
+            if (dtEndDate.SelectedDate != null && dtStartDate.SelectedDate != null)
+            {
+                DaysFilledIn = true;
+                DateTime StartDate = this.dtStartDate.SelectedDate.Value.Date;
+                DateTime EndDate = this.dtEndDate.SelectedDate.Value.Date;
+                double TotalDays = (EndDate - StartDate).TotalDays;
+                Days = int.Parse(Math.Floor(TotalDays).ToString());
+            }
             double PPD = 0;
             //Option
             if (cbKammen.IsChecked == true)
@@ -226,7 +269,9 @@ namespace slnGebruiker
             //Package
             if (cbRes.Text != "") PPD += Recidency.PackagePrice(cbRes.Text);
             txtOutput.Content = $"Price Per Day: {PPD}€";
+            if (DaysFilledIn) txtTotaal.Content = $"Total price for {Days} days is {PPD * Days}€";
         }
+    
 
         /*private void History_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -237,9 +282,16 @@ namespace slnGebruiker
 
         private void btnDetails_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = this.DG_History.SelectedItem as Recidency;
+            if (this.DG_History.SelectedItems.Count == 1)
+            {
+                Recidency recidency = this.DG_History.SelectedItem as Recidency;
 
-            new Residency_Details(recidency.Pet_ID, recidency.ID).Show();
+                new Residency_Details(recidency.Pet_ID, recidency.ID).Show();
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
         int y = 0;
         private void Verblijven_GotFocus(object sender, RoutedEventArgs e)

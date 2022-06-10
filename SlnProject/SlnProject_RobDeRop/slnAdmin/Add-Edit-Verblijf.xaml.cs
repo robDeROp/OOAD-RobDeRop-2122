@@ -118,54 +118,71 @@ namespace slnAdmin
 
         private void btnAanvragen_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = new Recidency();
-            recidency.StartDate = dtStartDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
-            recidency.EndDate = dtEndDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
-            recidency.Remarks = txtResRemarks.Text;
-            recidency.Pet_ID = Pet.GetPetId(cbPet.Text, cbUser.SelectedIndex.ToString());
-            recidency.Status = "0";
-            //Options
-            List<int> options = new List<int>();
-            if (cbKammen.IsChecked == true)
+            if (dtStartDate.Text != "" && dtEndDate.Text != "" && txtResRemarks.Text != ""  && cbUser.Text != "" && cbPet.Text != "")
             {
-                options.Add(1);
-            }
-            if (cbWassen.IsChecked == true)
-            {
-                options.Add(2);
-            }
-            if (cbGebruikStapmolen.IsChecked == true)
-            {
-                options.Add(3);
-            }
-            if (cbHoefsmid.IsChecked == true)
-            {
-                options.Add(4);
-            }
-            if (cbGedragstherapie.IsChecked == true)
-            {
-                options.Add(5);
-            }
-            if (cbKnippen.IsChecked == true)
-            {
-                options.Add(6);
-            }
-            if (cbLuxeVoedeing.IsChecked == true)
-            {
-                options.Add(7);
-            }
-            if (cbBorstelen.IsChecked == true)
-            {
-                options.Add(8);
-            }
-            recidency.Options = options;
-            //Package
-            recidency.Package_ID = cbRes.SelectedIndex;
+                Recidency recidency = new Recidency();
+                recidency.StartDate = dtStartDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
+                recidency.EndDate = dtEndDate.SelectedDate.Value.Date.ToString("yyyy-MM-dd");
+                recidency.Remarks = txtResRemarks.Text;
+                recidency.Pet_ID = Pet.GetPetId(cbPet.Text, cbUser.SelectedIndex.ToString());
+                recidency.Status = "0";
+                //Options
+                List<int> options = new List<int>();
+                if (cbKammen.IsChecked == true)
+                {
+                    options.Add(1);
+                }
+                if (cbWassen.IsChecked == true)
+                {
+                    options.Add(2);
+                }
+                if (cbGebruikStapmolen.IsChecked == true)
+                {
+                    options.Add(3);
+                }
+                if (cbHoefsmid.IsChecked == true)
+                {
+                    options.Add(4);
+                }
+                if (cbGedragstherapie.IsChecked == true)
+                {
+                    options.Add(5);
+                }
+                if (cbKnippen.IsChecked == true)
+                {
+                    options.Add(6);
+                }
+                if (cbLuxeVoedeing.IsChecked == true)
+                {
+                    options.Add(7);
+                }
+                if (cbBorstelen.IsChecked == true)
+                {
+                    options.Add(8);
+                }
+                recidency.Options = options;
+                //Package
+                recidency.Package_ID = cbRes.SelectedIndex;
 
-            Recidency.VerblijfAanvragen(recidency);
+                Recidency.VerblijfAanvragen(recidency);
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if everthing is filled in corectly and try again.");
+            }
         }
         private void PPDUpdate(object sender, RoutedEventArgs e)
         {
+            bool DaysFilledIn = false;
+            int Days = 0;
+            if (dtEndDate.SelectedDate != null && dtStartDate.SelectedDate != null)
+            {
+                DaysFilledIn = true;
+                DateTime StartDate = this.dtStartDate.SelectedDate.Value.Date;
+                DateTime EndDate = this.dtEndDate.SelectedDate.Value.Date;
+                double TotalDays = (EndDate - StartDate).TotalDays;
+                Days = int.Parse(Math.Floor(TotalDays).ToString());
+            }
             double PPD = 0;
             //Option
             if (cbKammen.IsChecked == true)
@@ -250,6 +267,8 @@ namespace slnAdmin
                 PPD += 4;
             }
             txtOutput.Content = $"Price Per Day: {PPD}€";
+            if (DaysFilledIn) txtTotaal.Content = $"Total price for {Days} days is {PPD * Days}€";
+
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {

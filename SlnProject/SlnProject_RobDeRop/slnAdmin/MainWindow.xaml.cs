@@ -38,7 +38,7 @@ namespace slnAdmin
         }
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            if (this.DG_Overzicht.SelectedItem != null)
+            if (this.DG_Overzicht.SelectedItems.Count == 1)
             {
                 User user = this.DG_Overzicht.SelectedItem as User;
                 new Add_Edit(user, 0, DG_Overzicht).Show();
@@ -50,16 +50,25 @@ namespace slnAdmin
         }
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User();
-            new Add_Edit(user, 1, this.DG_Overzicht).Show();
-            reloadDGV(this.DG_Overzicht);
+                User user = new User();
+                new Add_Edit(user, 1, this.DG_Overzicht).Show();
+                reloadDGV(this.DG_Overzicht);
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            User user = this.DG_Overzicht.SelectedItem as User;
-            User.DeleteUser(user);
-            reloadDGV(this.DG_Overzicht);
+            if (this.DG_Overzicht.SelectedItems.Count == 1)
+            {
+                User user = this.DG_Overzicht.SelectedItem as User;
+                User.DeleteUser(user);
+                reloadDGV(this.DG_Overzicht);
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
 
         private void txbSearch_TextChanged(object sender, TextChangedEventArgs e)
@@ -68,7 +77,7 @@ namespace slnAdmin
             List<User> sortedUsers = new List<User>();
             string SearchString = txbSearch.Text.ToString();
             sortedUsers.Clear();
-            foreach(User user in users)
+            foreach (User user in users)
             {
                 if (user.Fname.ToLower().Contains(SearchString.ToLower()) || user.Lname.ToLower().Contains(SearchString.ToLower()) || user.Login.ToLower().Contains(SearchString.ToLower()))
                 {
@@ -79,10 +88,10 @@ namespace slnAdmin
         }
         private void reloadDGV(DataGrid DG_Overzicht)
         {
-            List<User> recidencies = User.GetAllUsers();
-            if (DG_Overzicht.ItemsSource != recidencies)
+            List<User> users = User.GetAllUsers();
+            if (DG_Overzicht.ItemsSource != users)
             {
-                DG_Overzicht.ItemsSource = recidencies;
+                DG_Overzicht.ItemsSource = users;
             }
             DG_Overzicht.IsReadOnly = true;
         }
@@ -93,35 +102,66 @@ namespace slnAdmin
         }
         private void btnDetails_V_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
-            new Recidency_Details(recidency).Show();
+            if (this.DG_Overzicht_V.SelectedItems.Count == 1)
+            {
+                Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
+                new Recidency_Details(recidency).Show();
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
 
         private void btnEdit_V_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
-            new Add_Edit_Verblijf(recidency, 0, DG_Overzicht_V).Show();
+            if (this.DG_Overzicht_V.SelectedItems.Count == 1)
+            {
+                Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
+                new Add_Edit_Verblijf(recidency, 0, DG_Overzicht_V).Show();
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
 
         private void btnAdd_V_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = new Recidency();
-            new Add_Edit_Verblijf(recidency, 1, DG_Overzicht_V).Show();
+                Recidency recidency = new Recidency();
+                new Add_Edit_Verblijf(recidency, 1, DG_Overzicht_V).Show();
+
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
         }
 
         private void btnDelete_V_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
-            Recidency.DeleteRecidency(recidency);
-            reloadDGV_V(this.DG_Overzicht_V);
+            if (this.DG_Overzicht_V.SelectedItems.Count == 1)
+            {
+                Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
+                Recidency.DeleteRecidency(recidency);
+                reloadDGV_V(this.DG_Overzicht_V);
+            }
+
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
         private void btnAccept_Deny_Click(object sender, RoutedEventArgs e)
         {
-            Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
-            if(recidency.Status == "1") recidency.Status = "0";
-            else if(recidency.Status == "0") recidency.Status = "1";
-            Recidency.AcceptDenyRecidency(recidency);
-            reloadDGV_V(this.DG_Overzicht_V);
+            if (this.DG_Overzicht_V.SelectedItems.Count == 1)
+            {
+                Recidency recidency = this.DG_Overzicht_V.SelectedItem as Recidency;
+                if (recidency.Status == "1") recidency.Status = "0";
+                else if (recidency.Status == "0") recidency.Status = "1";
+                Recidency.AcceptDenyRecidency(recidency);
+                reloadDGV_V(this.DG_Overzicht_V);
+            }
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
         private void reloadDGV_V(DataGrid DG_Overzicht_V)
         {
@@ -154,26 +194,50 @@ namespace slnAdmin
         }
         private void btnEdit_P_Click(object sender, RoutedEventArgs e)
         {
-            Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
-            new Add_Edit_Pet(pet, 0, DG_Overzicht_P).Show();
+            if (this.DG_Overzicht_P.SelectedItems.Count == 1)
+            {
+                Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
+                new Add_Edit_Pet(pet, 0, DG_Overzicht_P).Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
 
         private void btnAdd_P_Click(object sender, RoutedEventArgs e)
         {
-            Pet pet = new Pet();
-            new Add_Edit_Pet(pet, 1, DG_Overzicht_P).Show();
+                Pet pet = new Pet();
+                new Add_Edit_Pet(pet, 1, DG_Overzicht_P).Show();
         }
 
         private void btnDelete_P_Click(object sender, RoutedEventArgs e)
         {
-            Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
-            Pet.DeletePet(pet);
-            reloadDGV_P(this.DG_Overzicht_P);
+            if (this.DG_Overzicht_P.SelectedItems.Count == 1)
+            {
+                Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
+                Pet.DeletePet(pet);
+                reloadDGV_P(this.DG_Overzicht_P);
+            }
+
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
         private void btnDetails_P_Click(object sender, RoutedEventArgs e)
         {
-            Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
-            new Pet_Details(pet).Show();
+            if (this.DG_Overzicht_P.SelectedItems.Count == 1)
+            {
+                Pet pet = this.DG_Overzicht_P.SelectedItem as Pet;
+                new Pet_Details(pet).Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Error: Something went wrong, check if one and only one row is selected.");
+            }
         }
         private void reloadDGV_P(DataGrid DG_Overzicht_P)
         {
